@@ -1,0 +1,9 @@
+{
+  "extends": ["tslint-config-deepcrawl"],
+  "rules": {
+    "no-angle-bracket-type-assertion": false,
+    "no-console": false,
+    "no-implicit-dependencies": false,
+    "max-classes-per-file": false
+  }
+}

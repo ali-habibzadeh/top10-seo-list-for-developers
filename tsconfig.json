@@ -1,0 +1,35 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "target": "esNext",
+    "lib": ["es2017", "dom", "esnext", "dom.iterable"],
+    "typeRoots": ["node_modules/typings", "@types"],
+    "paths": {
+      "robots-parser": ["src/@types/robots-parser.d.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"],
+  "typedocOptions": {
+    "mode": "file",
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "hideGenerator": true,
+    "excludeNotExported": true,
+    "excludeExternals": true,
+    "readme": "none",
+    "exclude": ["**/*.enum.ts", "**/*.mappings.ts", "**/base*.ts"]
+  }
+}
