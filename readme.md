@@ -38,7 +38,136 @@ yarn starts
 
   - `url=[string]`
 
-## Understading the results
+- **Response**
+
+```
+{
+    value: actuall value of this metric,
+    type: name of the data type of this metric,
+    name: name of this metric,
+    isArray: if the value is a collection or not
+}
+```
+
+### List of metrics names
+
+- `isResponsive`
+
+```
+{
+    value: true|false,
+    type: "boolean",
+    name: "isResponsive",
+    isArray: false
+}
+```
+
+- `isNoIndex`
+
+```
+  {
+  value: true|false,
+  type: "boolean",
+  name: "isNoIndex",
+  isArray: false
+  }
+```
+
+- `internalLinks`
+
+```
+  {
+  value: array of [ILinkData],
+  type: "object",
+  name: "internalLinks",
+  isArray: true
+  }
+```
+
+ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/ilinkdata.md
+
+- `performanceMetrics`
+
+```
+  {
+  value: array of [Paint PerformanceEntry],
+  type: "object",
+  name: "internalLinks",
+  isArray: true
+  }
+```
+
+PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry
+
+- `tfIdfScore`
+
+```
+  {
+  value: array of 10 most important tfIdf terms,
+  type: "object",
+  name: "internalLinks",
+  isArray: true
+  }
+```
+
+tfIdfTerm: https://github.com/NaturalNode/natural#tf-idf
+
+```
+term: string;
+tf: number;
+idf: number;
+tfidf: number;
+```
+
+- `responseStatus`
+
+```
+  {
+  value: 200,
+  type: "number",
+  name: "responseStatus",
+  isArray: false
+  }
+```
+
+- `schemaOrg`
+
+```
+  {
+  value: array of IMiccroDataScope
+  type: "object",
+  name: "schemaOrg",
+  isArray: true
+  }
+```
+
+IMiccroDataScope: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/imiccrodatascope.md
+
+- `redirectChain`
+
+```
+  {
+  value: array of IRedirectChainItem
+  type: "object",
+  name: "redirectChain",
+  isArray: true
+  }
+```
+
+IRedirectChainItem: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/iredirectchainitem.md
+
+- `allowedInRobotsTxt`
+
+```
+  {
+  value: IAllowedInRobotsTxt
+  type: "object",
+  name: "allowedInRobotsTxt",
+  isArray: false
+  }
+```
+
+IAllowedInRobotsTxt: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/iallowedinrobotstxt.md
 
 ## Code Documentation
 
@@ -56,5 +185,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-- [Rache Costello](https://twitter.com/rachellcostello) - Technical SEO, Content Manager and Author @DeepCrawl
+- [Rachel Costello](https://twitter.com/rachellcostello) - Technical SEO, Content Manager and Author @DeepCrawl
 - [Alec Bertram](https://twitter.com/KiwiAlec) - Reformed SEO and born-again product person
+
+```
+
+```
