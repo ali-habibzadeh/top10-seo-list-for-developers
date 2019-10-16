@@ -57,12 +57,12 @@ yarn starts
 - `isResponsive`
 
 ```
-{
+  {
     value: true|false,
     type: "boolean",
     name: "isResponsive",
     isArray: false
-}
+  }
 ```
 
 - `isNoIndex`
