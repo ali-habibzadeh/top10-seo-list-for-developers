@@ -24,6 +24,6 @@ Key value pairs of properties under this scope
 
 • **@type**: *string*
 
-*Defined in [metrics/metric-items/schema-org/extraction/microdata-scope.interface.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/microdata-scope.interface.ts#L5)*
+*Defined in [metrics/metric-items/schema-org/extraction/microdata-scope.interface.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/schema-org/extraction/microdata-scope.interface.ts#L5)*
 
 The type name for the item scope. e.g. Person

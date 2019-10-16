@@ -1,10 +1,10 @@
 import { camelCase, isArray } from "lodash";
-import * as puppeteer from "puppeteer";
+import { Page, Response } from "puppeteer";
 
 import { IMetric, IMetricValue } from "./metric.interface";
 
 export abstract class BaseMetric {
-  constructor(protected page: puppeteer.Page, protected response: puppeteer.Response | null) {}
+  constructor(protected page: Page, protected response: Response | null) {}
 
   public async getMetric(): Promise<IMetric<any>> {
     const { name, value } = await this.getMetricValue();

@@ -72,7 +72,7 @@
   "*://*.adform.net/**"
 ]
 
-*Defined in [page-rendering/config/constants/ad-rejections.ts:1](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/page-rendering/config/constants/ad-rejections.ts#L1)*
+*Defined in [page-rendering/config/constants/ad-rejections.ts:1](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/config/constants/ad-rejections.ts#L1)*
 
 ___
 
@@ -93,7 +93,7 @@ ___
   "*//*.webtrends.com/**"
 ]
 
-*Defined in [page-rendering/config/constants/analytics-rejections.ts:1](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/page-rendering/config/constants/analytics-rejections.ts#L1)*
+*Defined in [page-rendering/config/constants/analytics-rejections.ts:1](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/config/constants/analytics-rejections.ts#L1)*
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 • **apiRouter**: *Router* =  Router()
 
-*Defined in [api/routes.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/api/routes.ts#L5)*
+*Defined in [api/routes.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/api/routes.ts#L5)*
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 • **blockedResourceTypes**: *ResourceType[]* =  ["image", "media", "font", "texttrack", "eventsource"]
 
-*Defined in [page-rendering/config/constants/blocked-resource-types.ts:3](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/page-rendering/config/constants/blocked-resource-types.ts#L3)*
+*Defined in [page-rendering/config/constants/blocked-resource-types.ts:3](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/config/constants/blocked-resource-types.ts#L3)*
 
 ___
 
@@ -193,7 +193,7 @@ ___
   "--disable-dev-shm-usage"
 ]
 
-*Defined in [page-rendering/config/constants/chrome-switches.ts:1](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/page-rendering/config/constants/chrome-switches.ts#L1)*
+*Defined in [page-rendering/config/constants/chrome-switches.ts:1](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/config/constants/chrome-switches.ts#L1)*
 
 ___
 
@@ -211,7 +211,7 @@ ___
   AllowedInRobotsTxt
 ]
 
-*Defined in [metrics/metrics-list.ts:11](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metrics-list.ts#L11)*
+*Defined in [metrics/metrics-list.ts:11](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metrics-list.ts#L11)*
 
 ___
 
@@ -236,7 +236,7 @@ ___
   }
 ]
 
-*Defined in [metrics/metric-items/schema-org/extraction/prop-value.mappings.ts:1](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/prop-value.mappings.ts#L1)*
+*Defined in [metrics/metric-items/schema-org/extraction/prop-value.mappings.ts:1](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/schema-org/extraction/prop-value.mappings.ts#L1)*
 
 ## Functions
 
@@ -244,7 +244,7 @@ ___
 
 ▸ **getPageHealth**(`req`: Request, `res`: Response): *Promise‹Response›*
 
-*Defined in [api/page-health.route.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/api/page-health.route.ts#L6)*
+*Defined in [api/page-health.route.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/api/page-health.route.ts#L6)*
 
 **Parameters:**
 
@@ -261,7 +261,7 @@ ___
 
 ▸ **isValidUrl**(`url`: string): *boolean*
 
-*Defined in [utils/url.utils.ts:3](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/utils/url.utils.ts#L3)*
+*Defined in [utils/url.utils.ts:3](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/utils/url.utils.ts#L3)*
 
 **Parameters:**
 
@@ -277,22 +277,22 @@ Name | Type |
 
 ### ▪ **launchOptions**: *object*
 
-*Defined in [page-rendering/config/constants/launch-options.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/page-rendering/config/constants/launch-options.ts#L5)*
+*Defined in [page-rendering/config/constants/launch-options.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/config/constants/launch-options.ts#L5)*
 
 ###  args
 
 • **args**: *string[]* =  chromiumSwitches
 
-*Defined in [page-rendering/config/constants/launch-options.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/page-rendering/config/constants/launch-options.ts#L6)*
+*Defined in [page-rendering/config/constants/launch-options.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/config/constants/launch-options.ts#L6)*
 
 ###  headless
 
 • **headless**: *true* = true
 
-*Defined in [page-rendering/config/constants/launch-options.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/page-rendering/config/constants/launch-options.ts#L8)*
+*Defined in [page-rendering/config/constants/launch-options.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/config/constants/launch-options.ts#L8)*
 
 ###  userDataDir
 
 • **userDataDir**: *string* = "user-data"
 
-*Defined in [page-rendering/config/constants/launch-options.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/page-rendering/config/constants/launch-options.ts#L7)*
+*Defined in [page-rendering/config/constants/launch-options.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/config/constants/launch-options.ts#L7)*

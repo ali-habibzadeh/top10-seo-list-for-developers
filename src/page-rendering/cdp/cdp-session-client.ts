@@ -1,10 +1,10 @@
 import * as cheerio from "cheerio";
 import CDP from "devtools-protocol/types/protocol";
-import * as puppeteer from "puppeteer";
+import { CDPSession, Page } from "puppeteer";
 
 export class CDPSessionClient {
-  private client!: puppeteer.CDPSession;
-  constructor(private page: puppeteer.Page) {}
+  private client!: CDPSession;
+  constructor(private page: Page) {}
 
   public async getEventListeners(nodeId: number): Promise<CDP.DOMDebugger.EventListener[]> {
     const objectId = await this.resolveNodeObjectId(nodeId);

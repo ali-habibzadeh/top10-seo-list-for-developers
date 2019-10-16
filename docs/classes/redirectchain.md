@@ -34,7 +34,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L8)*
+*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L8)*
 
 **Parameters:**
 
@@ -53,7 +53,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L10)*
+*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L10)*
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 • **redirects**: *Request[]* =  this.response!.request().redirectChain()
 
-*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L8)*
+*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L8)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/base-types/base-metric.ts#L7)*
 
 ## Methods
 
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -93,7 +93,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:23](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L23)*
+*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:23](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L23)*
 
 Returns the list of redirects that has happened until the final page is reached.
 There is always at least 1 item returned if no redirections take place.
@@ -112,6 +112,6 @@ ___
 
 ▸ **getRedirectChain**(): *[IRedirectChainItem](../interfaces/iredirectchainitem.md)[]*
 
-*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:30](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L30)*
+*Defined in [metrics/metric-items/redirect-chain/redirect-chain.ts:30](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/redirect-chain/redirect-chain.ts#L30)*
 
 **Returns:** *[IRedirectChainItem](../interfaces/iredirectchainitem.md)[]*

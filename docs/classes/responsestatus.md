@@ -32,7 +32,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/status/status.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/status/status.ts#L7)*
+*Defined in [metrics/metric-items/status/status.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/status/status.ts#L7)*
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/status/status.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/status/status.ts#L8)*
+*Defined in [metrics/metric-items/status/status.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/status/status.ts#L8)*
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/base-types/base-metric.ts#L7)*
 
 ## Methods
 
@@ -71,7 +71,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -83,7 +83,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/status/status.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/status/status.ts#L20)*
+*Defined in [metrics/metric-items/status/status.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/status/status.ts#L20)*
 
 Contains the status code of the response (e.g., 200 for a success).
 

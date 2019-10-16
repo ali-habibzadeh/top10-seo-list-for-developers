@@ -16,7 +16,7 @@
 
 • **prop**: = "itemprop"
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts:4](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts#L4)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts:4](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts#L4)*
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 • **scope**: = "itemscope"
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts:2](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts#L2)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts:2](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts#L2)*
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 • **type**: = "itemtype"
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts:3](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts#L3)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts:3](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/metrics/metric-items/schema-org/extraction/schema-attrs.enum.ts#L3)*

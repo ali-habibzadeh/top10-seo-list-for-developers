@@ -1,5 +1,5 @@
 import { Minimatch } from "minimatch";
-import * as puppeteer from "puppeteer";
+import { Request } from "puppeteer";
 
 import { adRejections } from "./constants/ad-rejections";
 import { analyticsRejections } from "./constants/analytics-rejections";
@@ -8,7 +8,7 @@ import { blockedResourceTypes } from "./constants/blocked-resource-types";
 export class PageRequestHandler {
   private resourceType = this.request.resourceType();
 
-  constructor(private request: puppeteer.Request) {}
+  constructor(private request: Request) {}
 
   public async handle(): Promise<void> {
     return this.isBlocked() ? this.request.abort("aborted") : this.request.continue();
