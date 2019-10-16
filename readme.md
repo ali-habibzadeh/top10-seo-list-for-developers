@@ -44,7 +44,7 @@ yarn starts
 [
     {
         value: actuall value of this metric,
-        type: string|number|object|boolean.... name of the data type of this metric,
+        type: string|number|object|boolean....
         name: {string} name of this metric,
         isArray: {boolean} if the value is a collection or not
     },
