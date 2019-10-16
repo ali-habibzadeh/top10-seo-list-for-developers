@@ -69,10 +69,10 @@ yarn starts
 
 ```
   {
-  value: true|false,
-  type: "boolean",
-  name: "isNoIndex",
-  isArray: false
+    value: true|false,
+    type: "boolean",
+    name: "isNoIndex",
+    isArray: false
   }
 ```
 
@@ -80,10 +80,10 @@ yarn starts
 
 ```
   {
-  value: array of [ILinkData],
-  type: "object",
-  name: "internalLinks",
-  isArray: true
+    value: array of [ILinkData],
+    type: "object",
+    name: "internalLinks",
+    isArray: true
   }
 ```
 
@@ -93,10 +93,10 @@ ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master
 
 ```
   {
-  value: array of [Paint PerformanceEntry],
-  type: "object",
-  name: "internalLinks",
-  isArray: true
+    value: array of [Paint PerformanceEntry],
+    type: "object",
+    name: "internalLinks",
+    isArray: true
   }
 ```
 
@@ -106,10 +106,10 @@ PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEn
 
 ```
   {
-  value: array of 10 most important tfIdf terms,
-  type: "object",
-  name: "internalLinks",
-  isArray: true
+    value: array of 10 most important tfIdf terms,
+    type: "object",
+    name: "internalLinks",
+    isArray: true
   }
 ```
 
@@ -126,10 +126,10 @@ tfidf: number;
 
 ```
   {
-  value: 200,
-  type: "number",
-  name: "responseStatus",
-  isArray: false
+    value: 200,
+    type: "number",
+    name: "responseStatus",
+    isArray: false
   }
 ```
 
@@ -137,10 +137,10 @@ tfidf: number;
 
 ```
   {
-  value: array of IMiccroDataScope
-  type: "object",
-  name: "schemaOrg",
-  isArray: true
+    value: array of IMiccroDataScope
+    type: "object",
+    name: "schemaOrg",
+    isArray: true
   }
 ```
 
@@ -150,10 +150,10 @@ IMiccroDataScope: https://github.com/deepcrawl/top10-seo-list-for-developer/blob
 
 ```
   {
-  value: array of IRedirectChainItem
-  type: "object",
-  name: "redirectChain",
-  isArray: true
+    value: array of IRedirectChainItem
+    type: "object",
+    name: "redirectChain",
+    isArray: true
   }
 ```
 
@@ -163,10 +163,10 @@ IRedirectChainItem: https://github.com/deepcrawl/top10-seo-list-for-developer/bl
 
 ```
   {
-  value: IAllowedInRobotsTxt
-  type: "object",
-  name: "allowedInRobotsTxt",
-  isArray: false
+    value: IAllowedInRobotsTxt
+    type: "object",
+    name: "allowedInRobotsTxt",
+    isArray: false
   }
 ```
 
@@ -174,7 +174,7 @@ IAllowedInRobotsTxt: https://github.com/deepcrawl/top10-seo-list-for-developer/b
 
 ## Code Documentation
 
-- [Documentation](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/README.md)
+If you like to read how each metric is calculated please refer to the [code documentation.](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/README.md)
 
 ## Built With ❤️
 
