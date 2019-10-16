@@ -33,7 +33,7 @@
 
 \+ **new SchemaExtractor**(`content`: string): *[SchemaExtractor](schemaextractor.md)*
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L10)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L10)*
 
 **Parameters:**
 
@@ -49,7 +49,7 @@ Name | Type |
 
 • **$**: *CheerioStatic* =  cheerio.load(this.content, { ignoreWhitespace: true })
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L9)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L9)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **attrMappings**: *object[]* =  valueAttrMappings
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L8)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L8)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **content**: *string*
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L12)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L12)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **scopesList**: *Cheerio* =  this.$("[itemscope][itemtype]")
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L10)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L10)*
 
 ## Methods
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **getPropValue**(`prop`: CheerioElement): *string*
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:50](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L50)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:50](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L50)*
 
 **Parameters:**
 
@@ -97,7 +97,7 @@ ___
 
 ▸ **getPropValuesFromList**(`propsList`: CheerioElement[]): *__type*
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:40](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L40)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:40](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L40)*
 
 **Parameters:**
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **getSchema**(): *[IMiccroDataScope](../interfaces/imiccrodatascope.md)[]*
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:22](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L22)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:22](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L22)*
 
 Extracts the microdata within the document and returns an array objects for each scope found.
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **getSchemaTypeName**(`scope`: CheerioElement): *string*
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:35](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L35)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:35](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L35)*
 
 **Parameters:**
 
@@ -147,7 +147,7 @@ ___
 
 ▸ **getScopePropertiesList**(`scope`: CheerioElement): *CheerioElement[]*
 
-*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:30](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L30)*
+*Defined in [metrics/metric-items/schema-org/extraction/schema-extractor.ts:30](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts#L30)*
 
 **Parameters:**
 

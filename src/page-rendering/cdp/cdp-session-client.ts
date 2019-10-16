@@ -8,41 +8,42 @@ export class CDPSessionClient {
 
   public async getEventListeners(nodeId: number): Promise<CDP.DOMDebugger.EventListener[]> {
     const objectId = await this.resolveNodeObjectId(nodeId);
-    const output = <CDP.DOMDebugger.GetEventListenersResponse>(
+    const { listeners } = <CDP.DOMDebugger.GetEventListenersResponse>(
       await this.client.send("DOMDebugger.getEventListeners", { objectId })
     );
-    return output.listeners;
+    return listeners;
   }
 
   public async querySelectorAll(selector: string): Promise<number[]> {
-    const dom = await this.getDocument();
-    const nodes = <CDP.DOM.QuerySelectorAllResponse>(
-      await this.client.send("DOM.querySelectorAll", { selector, nodeId: dom.root.nodeId })
+    const doc = await this.getDocument();
+    const { nodeIds } = <CDP.DOM.QuerySelectorAllResponse>(
+      await this.client.send("DOM.querySelectorAll", { selector, nodeId: doc.root.nodeId })
     );
-    return nodes.nodeIds;
+    return nodeIds;
   }
 
   public async getDocument(): Promise<CDP.DOM.GetDocumentResponse> {
     this.client = await this.page.target().createCDPSession();
-    return <CDP.DOM.GetDocumentResponse>await this.client.send("DOM.getDocument");
+    return <Promise<CDP.DOM.GetDocumentResponse>>this.client.send("DOM.getDocument");
   }
 
   public async resolveNodeObjectId(nodeId: number): Promise<string | undefined> {
-    const node = <CDP.DOM.ResolveNodeResponse>await this.client.send("DOM.resolveNode", { nodeId });
-    return node.object.objectId;
+    const {
+      object: { objectId }
+    } = <CDP.DOM.ResolveNodeResponse>await this.client.send("DOM.resolveNode", { nodeId });
+    return objectId;
   }
 
   public async getTextContent(nodeId: number): Promise<string> {
-    const output = <CDP.DOM.GetOuterHTMLResponse>await this.client.send("DOM.getOuterHTML", { nodeId });
-    const $ = cheerio.load(output.outerHTML);
+    const { outerHTML } = <CDP.DOM.GetOuterHTMLResponse>await this.client.send("DOM.getOuterHTML", { nodeId });
+    const $ = cheerio.load(outerHTML);
     const elememt = $("*").first();
     return elememt.text();
   }
 
   public async getAttribute(nodeId: number, attribute: string): Promise<string | null> {
-    const attributesList = <CDP.DOM.GetAttributesResponse>await this.client.send("DOM.getAttributes", { nodeId });
-    const attrs = attributesList.attributes;
-    const attrIndex = attrs.indexOf(attribute);
-    return attrIndex === -1 ? null : attrs[attrIndex + 1];
+    const { attributes } = <CDP.DOM.GetAttributesResponse>await this.client.send("DOM.getAttributes", { nodeId });
+    const attrIndex = attributes.indexOf(attribute);
+    return attrIndex === -1 ? null : attributes[attrIndex + 1];
   }
 }

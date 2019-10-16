@@ -33,7 +33,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/performance/performance.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/performance/performance.ts#L10)*
+*Defined in [metrics/metric-items/performance/performance.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/performance/performance.ts#L10)*
 
 **Parameters:**
 
@@ -52,7 +52,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/performance/performance.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/performance/performance.ts#L12)*
+*Defined in [metrics/metric-items/performance/performance.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/performance/performance.ts#L12)*
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/base-types/base-metric.ts#L7)*
 
 ## Methods
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -84,7 +84,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/performance/performance.ts:25](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/performance/performance.ts#L25)*
+*Defined in [metrics/metric-items/performance/performance.ts:25](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/performance/performance.ts#L25)*
 
 Returns the list of paint performance entries.
 
@@ -104,6 +104,6 @@ ___
 
 ▸ **pageFunction**(): *string*
 
-*Defined in [metrics/metric-items/performance/performance.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/performance/performance.ts#L7)*
+*Defined in [metrics/metric-items/performance/performance.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/performance/performance.ts#L7)*
 
 **Returns:** *string*

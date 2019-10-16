@@ -34,7 +34,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/responsive/responsive.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/responsive/responsive.ts#L8)*
+*Defined in [metrics/metric-items/responsive/responsive.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/responsive/responsive.ts#L8)*
 
 **Parameters:**
 
@@ -53,7 +53,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/responsive/responsive.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/responsive/responsive.ts#L10)*
+*Defined in [metrics/metric-items/responsive/responsive.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/responsive/responsive.ts#L10)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/base-types/base-metric.ts#L7)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **selector**: *string* =  `meta[name="viewport"][content*="width=device-width`
 
-*Defined in [metrics/metric-items/responsive/responsive.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/responsive/responsive.ts#L7)*
+*Defined in [metrics/metric-items/responsive/responsive.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/responsive/responsive.ts#L7)*
 
 ## Methods
 
@@ -81,7 +81,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -93,7 +93,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/responsive/responsive.ts:23](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/responsive/responsive.ts#L23)*
+*Defined in [metrics/metric-items/responsive/responsive.ts:23](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/responsive/responsive.ts#L23)*
 
 Returns true if the page has a meta tag with attribute `name=viewport`
 and it the `content` attribute at least contains `width=device-width`
@@ -112,6 +112,6 @@ ___
 
 ▸ **pageFunction**(): *boolean*
 
-*Defined in [metrics/metric-items/responsive/responsive.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/responsive/responsive.ts#L8)*
+*Defined in [metrics/metric-items/responsive/responsive.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/9aaba96/src/metrics/metric-items/responsive/responsive.ts#L8)*
 
 **Returns:** *boolean*
