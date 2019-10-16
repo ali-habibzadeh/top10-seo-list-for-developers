@@ -32,7 +32,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/schema-org/schema-org.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/metrics/metric-items/schema-org/schema-org.ts#L8)*
+*Defined in [metrics/metric-items/schema-org/schema-org.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e8cd669/src/metrics/metric-items/schema-org/schema-org.ts#L8)*
 
 **Parameters:**
 
@@ -51,7 +51,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/schema-org/schema-org.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/metrics/metric-items/schema-org/schema-org.ts#L9)*
+*Defined in [metrics/metric-items/schema-org/schema-org.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e8cd669/src/metrics/metric-items/schema-org/schema-org.ts#L9)*
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e8cd669/src/metrics/base-types/base-metric.ts#L7)*
 
 ## Methods
 
@@ -71,7 +71,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e8cd669/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -83,7 +83,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/schema-org/schema-org.ts:21](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/metrics/metric-items/schema-org/schema-org.ts#L21)*
+*Defined in [metrics/metric-items/schema-org/schema-org.ts:21](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e8cd669/src/metrics/metric-items/schema-org/schema-org.ts#L21)*
 
 Extracts the microdata within the document and returns an array objects for each scope found.
 
