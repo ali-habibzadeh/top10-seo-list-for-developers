@@ -32,7 +32,7 @@
 
 \+ **new CDPSessionClient**(`page`: Page): *[CDPSessionClient](cdpsessionclient.md)*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L6)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L6)*
 
 **Parameters:**
 
@@ -48,7 +48,7 @@ Name | Type |
 
 • **client**: *CDPSession*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L6)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L6)*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 • **page**: *Page*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L7)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L7)*
 
 ## Methods
 
@@ -64,7 +64,7 @@ ___
 
 ▸ **getAttribute**(`nodeId`: number, `attribute`: string): *Promise‹string | null›*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:44](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L44)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:44](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L44)*
 
 **Parameters:**
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **getDocument**(): *Promise‹CDP.DOM.GetDocumentResponse›*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:25](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L25)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:25](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L25)*
 
 **Returns:** *Promise‹CDP.DOM.GetDocumentResponse›*
 
@@ -91,7 +91,7 @@ ___
 
 ▸ **getEventListeners**(`nodeId`: number): *Promise‹CDP.DOMDebugger.EventListener[]›*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L9)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L9)*
 
 **Parameters:**
 
@@ -107,7 +107,7 @@ ___
 
 ▸ **getTextContent**(`nodeId`: number): *Promise‹string›*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:37](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L37)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:37](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L37)*
 
 **Parameters:**
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **querySelectorAll**(`selector`: string): *Promise‹number[]›*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:17](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L17)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:17](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L17)*
 
 **Parameters:**
 
@@ -139,7 +139,7 @@ ___
 
 ▸ **resolveNodeObjectId**(`nodeId`: number): *Promise‹string | undefined›*
 
-*Defined in [page-rendering/cdp/cdp-session-client.ts:30](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/3d51198/src/page-rendering/cdp/cdp-session-client.ts#L30)*
+*Defined in [page-rendering/cdp/cdp-session-client.ts:30](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/0eaacd5/src/page-rendering/cdp/cdp-session-client.ts#L30)*
 
 **Parameters:**
 
