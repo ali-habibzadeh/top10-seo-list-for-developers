@@ -187,7 +187,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - [Rachel Costello](https://twitter.com/rachellcostello) - Technical SEO, Content Manager and Author @DeepCrawl
 - [Alec Bertram](https://twitter.com/KiwiAlec) - Reformed SEO and born-again product person
-
-```
-
-```
