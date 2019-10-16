@@ -20,7 +20,7 @@
 
 • **isRedirect**: *boolean*
 
-*Defined in [metrics/metric-items/redirect-chain/redirect-chain.interface.ts:13](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/metric-items/redirect-chain/redirect-chain.interface.ts#L13)*
+*Defined in [metrics/metric-items/redirect-chain/redirect-chain.interface.ts:13](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/33055d5/src/metrics/metric-items/redirect-chain/redirect-chain.interface.ts#L13)*
 
 Whether the page is the final page in the redirection chain or not
 
@@ -30,7 +30,7 @@ ___
 
 • **status**: *number*
 
-*Defined in [metrics/metric-items/redirect-chain/redirect-chain.interface.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/metric-items/redirect-chain/redirect-chain.interface.ts#L9)*
+*Defined in [metrics/metric-items/redirect-chain/redirect-chain.interface.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/33055d5/src/metrics/metric-items/redirect-chain/redirect-chain.interface.ts#L9)*
 
 Status code of the request
 
@@ -40,6 +40,6 @@ ___
 
 • **url**: *string*
 
-*Defined in [metrics/metric-items/redirect-chain/redirect-chain.interface.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/metric-items/redirect-chain/redirect-chain.interface.ts#L5)*
+*Defined in [metrics/metric-items/redirect-chain/redirect-chain.interface.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/33055d5/src/metrics/metric-items/redirect-chain/redirect-chain.interface.ts#L5)*
 
 Contains the url of the request made
