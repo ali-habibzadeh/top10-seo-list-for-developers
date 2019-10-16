@@ -24,7 +24,7 @@ export class CDPSessionClient {
 
   public async getDocument(): Promise<CDP.DOM.GetDocumentResponse> {
     this.client = await this.page.target().createCDPSession();
-    return <CDP.DOM.GetDocumentResponse>(<unknown>this.client.send("DOM.getDocument"));
+    return <CDP.DOM.GetDocumentResponse>await this.client.send("DOM.getDocument");
   }
 
   public async resolveNodeObjectId(nodeId: number): Promise<string | undefined> {

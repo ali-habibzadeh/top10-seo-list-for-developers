@@ -1,10 +1,10 @@
 export interface IRedirectChainItem {
   /**
-   * Contains the url of the request made
+   * Contains the url of the requested page
    */
   url: string;
   /**
-   * Status code of the request
+   * Contains the status code of the response (e.g., 200 for a success).
    */
   status: number;
   /**
