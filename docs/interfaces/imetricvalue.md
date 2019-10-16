@@ -25,7 +25,7 @@
 
 • **name**: *string*
 
-*Defined in [metrics/base-types/metric.interface.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/base-types/metric.interface.ts#L5)*
+*Defined in [metrics/base-types/metric.interface.ts:5](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/base-types/metric.interface.ts#L5)*
 
 Name of the metric
 
@@ -35,6 +35,6 @@ ___
 
 • **value**: *T*
 
-*Defined in [metrics/base-types/metric.interface.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/base-types/metric.interface.ts#L9)*
+*Defined in [metrics/base-types/metric.interface.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/base-types/metric.interface.ts#L9)*
 
 Value of the metric

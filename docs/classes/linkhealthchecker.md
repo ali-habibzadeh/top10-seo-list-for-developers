@@ -30,7 +30,7 @@
 
 \+ **new LinkHealthChecker**(`linkData`: [IRawLinkData](../interfaces/irawlinkdata.md)): *[LinkHealthChecker](linkhealthchecker.md)*
 
-*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:3](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L3)*
+*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:3](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L3)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type |
 
 • **linkData**: *[IRawLinkData](../interfaces/irawlinkdata.md)*
 
-*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:4](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L4)*
+*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:4](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L4)*
 
 ## Methods
 
@@ -54,7 +54,7 @@ Name | Type |
 
 ▸ **hasHashHref**(): *boolean*
 
-*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L20)*
+*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L20)*
 
 **Returns:** *boolean*
 
@@ -64,7 +64,7 @@ ___
 
 ▸ **hasHref**(): *boolean*
 
-*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L12)*
+*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L12)*
 
 **Returns:** *boolean*
 
@@ -74,7 +74,7 @@ ___
 
 ▸ **hasJsHandler**(): *boolean*
 
-*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:16](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L16)*
+*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:16](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L16)*
 
 **Returns:** *boolean*
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **hrefIsJs**(): *boolean*
 
-*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:24](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L24)*
+*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:24](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L24)*
 
 **Returns:** *boolean*
 
@@ -94,6 +94,6 @@ ___
 
 ▸ **isHealthy**(): *boolean*
 
-*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/e7273e7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L6)*
+*Defined in [metrics/metric-items/internal-links/health-check/link-health-checker.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/a94cda7/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts#L6)*
 
 **Returns:** *boolean*

@@ -28,12 +28,12 @@ export class CDPSessionClient {
   }
 
   public async resolveNodeObjectId(nodeId: number): Promise<string | undefined> {
-    const node = <CDP.DOM.ResolveNodeResponse>(<unknown>await this.client.send("DOM.resolveNode", { nodeId }));
+    const node = <CDP.DOM.ResolveNodeResponse>await this.client.send("DOM.resolveNode", { nodeId });
     return node.object.objectId;
   }
 
   public async getTextContent(nodeId: number): Promise<string> {
-    const output = <CDP.DOM.GetOuterHTMLResponse>(<unknown>await this.client.send("DOM.getOuterHTML", { nodeId }));
+    const output = <CDP.DOM.GetOuterHTMLResponse>await this.client.send("DOM.getOuterHTML", { nodeId });
     const $ = cheerio.load(output.outerHTML);
     const elememt = $("*").first();
     return elememt.text();
