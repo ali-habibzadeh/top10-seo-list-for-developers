@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-* BaseMetric
+* [BaseMetric](basemetric.md)
 
   ↳ **IsResponsive**
 
@@ -14,10 +14,17 @@
 
 * [constructor](isresponsive.md#constructor)
 
+### Properties
+
+* [page](isresponsive.md#protected-page)
+* [response](isresponsive.md#protected-response)
+* [selector](isresponsive.md#protected-selector)
+
 ### Methods
 
 * [getMetric](isresponsive.md#getmetric)
 * [getMetricValue](isresponsive.md#getmetricvalue)
+* [pageFunction](isresponsive.md#protected-pagefunction)
 
 ## Constructors
 
@@ -25,9 +32,9 @@
 
 \+ **new IsResponsive**(`page`: Page, `response`: Response | null): *[IsResponsive](isresponsive.md)*
 
-*Overrides void*
+*Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [responsive/responsive.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/bfde32e/src/metrics/metric-items/responsive/responsive.ts#L8)*
+*Defined in [metrics/metric-items/responsive/responsive.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/metric-items/responsive/responsive.ts#L8)*
 
 **Parameters:**
 
@@ -38,27 +45,55 @@ Name | Type |
 
 **Returns:** *[IsResponsive](isresponsive.md)*
 
+## Properties
+
+### `Protected` page
+
+• **page**: *Page*
+
+*Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
+
+*Defined in [metrics/metric-items/responsive/responsive.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/metric-items/responsive/responsive.ts#L10)*
+
+___
+
+### `Protected` response
+
+• **response**: *Response | null*
+
+*Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
+
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/base-types/base-metric.ts#L7)*
+
+___
+
+### `Protected` selector
+
+• **selector**: *string* =  `meta[name="viewport"][content*="width=device-width`
+
+*Defined in [metrics/metric-items/responsive/responsive.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/metric-items/responsive/responsive.ts#L7)*
+
 ## Methods
 
 ###  getMetric
 
-▸ **getMetric**(): *Promise‹IMetric‹any››*
+▸ **getMetric**(): *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
-*Inherited from void*
+*Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [/Users/alihabibzadeh/top10-seo-list-for-developer/src/metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/bfde32e/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/base-types/base-metric.ts#L9)*
 
-**Returns:** *Promise‹IMetric‹any››*
+**Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
 ___
 
 ###  getMetricValue
 
-▸ **getMetricValue**(): *Promise‹IMetricValue‹boolean››*
+▸ **getMetricValue**(): *Promise‹[IMetricValue](../interfaces/imetricvalue.md)‹boolean››*
 
-*Overrides void*
+*Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [responsive/responsive.ts:23](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/bfde32e/src/metrics/metric-items/responsive/responsive.ts#L23)*
+*Defined in [metrics/metric-items/responsive/responsive.ts:23](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/metric-items/responsive/responsive.ts#L23)*
 
 Returns true if the page has a meta tag with attribute `name=viewport`
 and it the `content` attribute at least contains `width=device-width`
@@ -67,6 +102,16 @@ and it the `content` attribute at least contains `width=device-width`
 
 **`property`** {boolean} `value` - The value of this metric
 
-**Returns:** *Promise‹IMetricValue‹boolean››*
+**Returns:** *Promise‹[IMetricValue](../interfaces/imetricvalue.md)‹boolean››*
 
 IMetricValue
+
+___
+
+### `Protected` pageFunction
+
+▸ **pageFunction**(): *boolean*
+
+*Defined in [metrics/metric-items/responsive/responsive.ts:8](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/metrics/metric-items/responsive/responsive.ts#L8)*
+
+**Returns:** *boolean*

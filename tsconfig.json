@@ -24,12 +24,7 @@
   "include": ["src"],
   "typedocOptions": {
     "mode": "file",
-    "excludePrivate": true,
-    "excludeProtected": true,
-    "hideGenerator": true,
     "excludeNotExported": true,
-    "excludeExternals": true,
-    "readme": "none",
-    "exclude": ["**/*.enum.ts", "**/*.mappings.ts", "**/base*.ts"]
+    "readme": "none"
   }
 }

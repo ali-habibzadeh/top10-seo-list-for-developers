@@ -1,0 +1,106 @@
+[top10-seo-list-for-developer](../README.md) › [PageRenderService](pagerenderservice.md)
+
+# Class: PageRenderService
+
+## Hierarchy
+
+* **PageRenderService**
+
+## Index
+
+### Constructors
+
+* [constructor](pagerenderservice.md#constructor)
+
+### Properties
+
+* [browser](pagerenderservice.md#private-browser)
+* [page](pagerenderservice.md#private-page)
+* [url](pagerenderservice.md#private-url)
+
+### Methods
+
+* [close](pagerenderservice.md#private-close)
+* [getPageRenderMetrics](pagerenderservice.md#getpagerendermetrics)
+* [getResponse](pagerenderservice.md#private-getresponse)
+* [setPageHandlers](pagerenderservice.md#private-setpagehandlers)
+
+## Constructors
+
+###  constructor
+
+\+ **new PageRenderService**(`url`: string): *[PageRenderService](pagerenderservice.md)*
+
+*Defined in [page-rendering/page-render.service.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/page-rendering/page-render.service.ts#L10)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`url` | string |
+
+**Returns:** *[PageRenderService](pagerenderservice.md)*
+
+## Properties
+
+### `Private` browser
+
+• **browser**: *Browser*
+
+*Defined in [page-rendering/page-render.service.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/page-rendering/page-render.service.ts#L9)*
+
+___
+
+### `Private` page
+
+• **page**: *Page*
+
+*Defined in [page-rendering/page-render.service.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/page-rendering/page-render.service.ts#L10)*
+
+___
+
+### `Private` url
+
+• **url**: *string*
+
+*Defined in [page-rendering/page-render.service.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/page-rendering/page-render.service.ts#L12)*
+
+## Methods
+
+### `Private` close
+
+▸ **close**(): *Promise‹void›*
+
+*Defined in [page-rendering/page-render.service.ts:34](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/page-rendering/page-render.service.ts#L34)*
+
+**Returns:** *Promise‹void›*
+
+___
+
+###  getPageRenderMetrics
+
+▸ **getPageRenderMetrics**(): *Promise‹[IMetric](../interfaces/imetric.md)‹any›[]›*
+
+*Defined in [page-rendering/page-render.service.ts:14](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/page-rendering/page-render.service.ts#L14)*
+
+**Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any›[]›*
+
+___
+
+### `Private` getResponse
+
+▸ **getResponse**(): *Promise‹Response | null›*
+
+*Defined in [page-rendering/page-render.service.ts:22](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/page-rendering/page-render.service.ts#L22)*
+
+**Returns:** *Promise‹Response | null›*
+
+___
+
+### `Private` setPageHandlers
+
+▸ **setPageHandlers**(): *Promise‹void›*
+
+*Defined in [page-rendering/page-render.service.ts:29](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/5df526d/src/page-rendering/page-render.service.ts#L29)*
+
+**Returns:** *Promise‹void›*
