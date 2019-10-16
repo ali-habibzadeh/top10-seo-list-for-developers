@@ -41,12 +41,15 @@ yarn starts
 - **Response**
 
 ```
-{
-    value: actuall value of this metric,
-    type: name of the data type of this metric,
-    name: name of this metric,
-    isArray: if the value is a collection or not
-}
+[
+    {
+        value: actuall value of this metric,
+        type: string|number|object|boolean.... name of the data type of this metric,
+        name: {string} name of this metric,
+        isArray: {boolean} if the value is a collection or not
+    },
+    ...
+]
 ```
 
 ### List of metrics names
