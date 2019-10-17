@@ -1,3 +1,5 @@
+![DeepCrawl](https://www.deepcrawl.com/wp-content/themes/deepcrawl/images/deepcrawl-logo.svg)
+
 # Top 10 things developers need to know about SEO
 
 A Simple API containing a curated set of metrics about the health of a webpage from the technical SEO point of view. It should act as a starting point for an engineer who likes to play and learn more about extracting insights from web pages for the purposes of SEO or testing.
