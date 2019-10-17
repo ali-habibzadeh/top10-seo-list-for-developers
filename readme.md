@@ -174,9 +174,15 @@ IAllowedInRobotsTxt: https://github.com/deepcrawl/top10-seo-list-for-developer/b
 
 ## Code Documentation
 
-For design check out the Architecture diagrams(ARCHITECTURE.MD)
-
 If you like to read how each metric is calculated please refer to the [code documentation.](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/README.md)
+
+### High level API
+
+![High level API](designs/out/designs/high-level-api.svg)
+
+### Internal Links Calculation
+
+![High level API](designs/out/designs/metrics/internal-links.svg)
 
 ## Built With ❤️ using
 
