@@ -13,7 +13,7 @@ System_Boundary(InternalLinksCalculation, "Internal Links Calculation") {
     Component(CDPSessionClient, "CDPSessionClient", "TypeScript Class")
     Component(LinkHealthChecker, "LinkHealthChecker", "TypeScript Class")
 
-    System_Ext(puppeteer, "puppeteer/CDPSession", "Interacts with a page though DCP")
+    System_Ext(puppeteer, "puppeteer/CDPSession", "CDP API")
 
     Rel(metricsList, PageRenderService, "IMetric<T>[]")
     Rel(PageRenderService, metricsList, "Page, Response")
