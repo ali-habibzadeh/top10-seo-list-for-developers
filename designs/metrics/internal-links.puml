@@ -17,7 +17,9 @@ System_Boundary(InternalLinksCalculation, "Internal Links Calculation") {
     Rel(InternalLinks, metricsList, "IMetric<ILinkData[]>")
     Rel(metricsList, InternalLinks, "Page, Response")
     Rel(CDPSessionClient, InternalLinks, "IRawLinkData")
+    Rel(InternalLinks, CDPSessionClient, "Page")
     Rel(LinkHealthChecker, InternalLinks, "boolean")
+    Rel(InternalLinks, LinkHealthChecker, "IRawLinkData")
 }
 
 @enduml
