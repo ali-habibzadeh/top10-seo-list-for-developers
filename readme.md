@@ -51,7 +51,7 @@ yarn starts
 ]
 ```
 
-### List of metrics names
+### List of metrics
 
 <details>
 <summary>isResponsive</summary>
