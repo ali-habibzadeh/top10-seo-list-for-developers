@@ -92,7 +92,22 @@ yarn starts
 
 ```
   {
-    value: array of [ILinkData],
+    value: [
+      {
+        href: "https://stackoverflow.com",
+        listeners: [{
+          type: "click",
+          useCapture: false,
+          passive: false,
+          once: false,
+          scriptId: "12",
+          lineNumber: 2,
+          columnNumber: 9085
+        }],
+        text: " Stack Overflow ",
+        healthy: true
+      }
+    ],
     type: "object",
     name: "internalLinks",
     isArray: true
@@ -128,7 +143,21 @@ PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEn
 
 ```
   {
-    value: array of 10 most important tfIdf terms,
+    value: [
+          value: [{
+          name: "first-paint",
+          entryType: "paint",
+          startTime: 1171.500000054948,
+          duration: 0
+        },
+        {
+          name: "first-contentful-paint",
+          entryType: "paint",
+          startTime: 1171.500000054948,
+          duration: 0
+        }
+      ]
+    ],
     type: "object",
     name: "internalLinks",
     isArray: true
@@ -162,7 +191,16 @@ tfIdfTerm: https://github.com/NaturalNode/natural#tf-idf
 
 ```
   {
-    value: array of IMiccroDataScope
+    value: [
+          {
+        @type: "Answer",
+        upvoteCount: "200",
+        text: " I recommend status code 422, "
+        Unprocessable Entity ". 11.2. 422 Unprocessable Entity The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity (hence a 415(Unsupported Media Type) status code is inappropriate), and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions. For example, this error condition may occur if an XML request body contains well-formed (i.e., syntactically correct), but semantically erroneous, XML instructions. ",
+        dateCreated: "",
+        url: "/a/3291292"
+      }
+    ]
     type: "object",
     name: "schemaOrg",
     isArray: true
@@ -180,7 +218,13 @@ IMiccroDataScope: https://github.com/deepcrawl/top10-seo-list-for-developer/blob
 
 ```
   {
-    value: array of IRedirectChainItem
+    value: [
+            {
+        url: "https://stackoverflow.com/questions/3290182/rest-http-status-codes-for-failed-validation-or-invalid-duplicate",
+        status: 200,
+        isRedirect: false
+      }
+    ]
     type: "object",
     name: "redirectChain",
     isArray: true
@@ -198,7 +242,10 @@ IRedirectChainItem: https://github.com/deepcrawl/top10-seo-list-for-developer/bl
 
 ```
   {
-    value: IAllowedInRobotsTxt
+    value: {
+      isAllowed: true,
+      matchedAtLine: 68
+    },
     type: "object",
     name: "allowedInRobotsTxt",
     isArray: false
