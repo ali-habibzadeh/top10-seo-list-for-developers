@@ -125,7 +125,21 @@ ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master
 
 ```
   {
-    value: array of [Paint PerformanceEntry],
+    value: [
+          value: [{
+          name: "first-paint",
+          entryType: "paint",
+          startTime: 1171.500000054948,
+          duration: 0
+        },
+        {
+          name: "first-contentful-paint",
+          entryType: "paint",
+          startTime: 1171.500000054948,
+          duration: 0
+        }
+      ]
+    ],
     type: "object",
     name: "internalLinks",
     isArray: true
@@ -144,19 +158,24 @@ PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEn
 ```
   {
     value: [
-          value: [{
-          name: "first-paint",
-          entryType: "paint",
-          startTime: 1171.500000054948,
-          duration: 0
+      {
+        term: "http",
+        tf: 22,
+        idf: 0.3068528194400547,
+        tfidf: 6.750762027681204
         },
         {
-          name: "first-contentful-paint",
-          entryType: "paint",
-          startTime: 1171.500000054948,
-          duration: 0
-        }
-      ]
+        term: "request",
+        tf: 22,
+        idf: 0.3068528194400547,
+        tfidf: 6.750762027681204
+        },
+        {
+        term: "status",
+        tf: 19,
+        idf: 0.3068528194400547,
+        tfidf: 5.830203569361039
+      }
     ],
     type: "object",
     name: "internalLinks",
