@@ -12,7 +12,7 @@ System_Boundary(InternalLinksCalculation, "Internal Links Calculation") {
     Component(InternalLinks, "InternalLinks", "TypeScript Class")
     Component(CDPSessionClient, "CDPSessionClient", "TypeScript Class")
     Component(LinkHealthChecker, "LinkHealthChecker", "TypeScript Class")
-    Rel(metricsList, PageRenderService, "IMetric<any>[]")
+    Rel(metricsList, PageRenderService, "IMetric<T>[]")
     Rel(PageRenderService, metricsList, "Page, Response")
     Rel(InternalLinks, metricsList, "IMetric<ILinkData[]>")
     Rel(metricsList, InternalLinks, "Page, Response")
