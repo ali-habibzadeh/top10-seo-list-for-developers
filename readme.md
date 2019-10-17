@@ -42,7 +42,7 @@ yarn starts
 
 The endpoints response will be an array of all the metrics below, each with a unique name and interface for the value property. If value property is an array, then the `isArray` property will be `true`.
 
-`type` property is the name of the data type for value and when value is an array, it will be the name of the data type of it's items.
+`type` property is the name of the data type of the value property and when value is an array, then type name will be the name of the data type of it's items.
 
 ```
 [{
