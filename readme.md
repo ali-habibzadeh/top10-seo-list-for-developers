@@ -1,4 +1,4 @@
-![DeepCrawl](https://www.deepcrawl.com/wp-content/themes/deepcrawl/images/deepcrawl-logo.svg)
+<img src="https://www.deepcrawl.com/wp-content/themes/deepcrawl/images/deepcrawl-logo.svg" alt="drawing" width="200">
 
 # Top 10 things developers need to know about SEO
 
