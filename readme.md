@@ -42,13 +42,13 @@ yarn starts
 
 ```
 [
-    {
-        value: actuall value of this metric,
-        type: string|number|object|boolean....
-        name: {string} name of this metric,
-        isArray: {boolean} if the value is a collection or not
-    },
-    ...
+  {
+      value: "any",
+      type: "string|number|object|boolean"
+      name: "string name of metric",
+      isArray: true|false
+  },
+  ...
 ]
 ```
 
@@ -58,7 +58,7 @@ yarn starts
 <summary>isResponsive</summary>
 <p>
 
-```json
+```
 {
   "value": true | false,
   "type": "boolean",
@@ -74,7 +74,7 @@ yarn starts
 <summary>isNoIndex</summary>
 <p>
 
-```json
+```
 {
   "value": true | false,
   "type": "boolean",
@@ -90,7 +90,7 @@ yarn starts
 <summary>internalLinks</summary>
 <p>
 
-```json
+```
   {
     value: array of [ILinkData],
     type: "object",
@@ -108,7 +108,7 @@ ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master
 <summary>performanceMetrics</summary>
 <p>
 
-```json
+```
   {
     value: array of [Paint PerformanceEntry],
     type: "object",
@@ -126,7 +126,7 @@ PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEn
 <summary>tfIdfScore</summary>
 <p>
 
-```json
+```
   {
     value: array of 10 most important tfIdf terms,
     type: "object",
@@ -144,7 +144,7 @@ tfIdfTerm: https://github.com/NaturalNode/natural#tf-idf
 <summary>responseStatus</summary>
 <p>
 
-```json
+```
 {
   "value": 200,
   "type": "number",
@@ -160,7 +160,7 @@ tfIdfTerm: https://github.com/NaturalNode/natural#tf-idf
 <summary>schemaOrg</summary>
 <p>
 
-```json
+```
   {
     value: array of IMiccroDataScope
     type: "object",
@@ -178,7 +178,7 @@ IMiccroDataScope: https://github.com/deepcrawl/top10-seo-list-for-developer/blob
 <summary>redirectChain</summary>
 <p>
 
-```json
+```
   {
     value: array of IRedirectChainItem
     type: "object",
@@ -196,7 +196,7 @@ IRedirectChainItem: https://github.com/deepcrawl/top10-seo-list-for-developer/bl
 <summary>allowedInRobotsTxt</summary>
 <p>
 
-```json
+```
   {
     value: IAllowedInRobotsTxt
     type: "object",
