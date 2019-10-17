@@ -54,31 +54,43 @@ yarn starts
 
 ### List of metrics names
 
-- `isResponsive`
+<details>
+<summary>isResponsive</summary>
+<p>
 
-```
-  {
-    value: true|false,
-    type: "boolean",
-    name: "isResponsive",
-    isArray: false
-  }
-```
-
-- `isNoIndex`
-
-```
-  {
-    value: true|false,
-    type: "boolean",
-    name: "isNoIndex",
-    isArray: false
-  }
+```json
+{
+  "value": true | false,
+  "type": "boolean",
+  "name": "isResponsive",
+  "isArray": false
+}
 ```
 
-- `internalLinks`
+</p>
+</details>
 
+<details>
+<summary>isNoIndex</summary>
+<p>
+
+```json
+{
+  "value": true | false,
+  "type": "boolean",
+  "name": "isNoIndex",
+  "isArray": false
+}
 ```
+
+</p>
+</details>
+
+<details>
+<summary>internalLinks</summary>
+<p>
+
+```json
   {
     value: array of [ILinkData],
     type: "object",
@@ -89,9 +101,14 @@ yarn starts
 
 ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/ilinkdata.md
 
-- `performanceMetrics`
+</p>
+</details>
 
-```
+<details>
+<summary>performanceMetrics</summary>
+<p>
+
+```json
   {
     value: array of [Paint PerformanceEntry],
     type: "object",
@@ -102,9 +119,14 @@ ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master
 
 PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry
 
-- `tfIdfScore`
+</p>
+</details>
 
-```
+<details>
+<summary>tfIdfScore</summary>
+<p>
+
+```json
   {
     value: array of 10 most important tfIdf terms,
     type: "object",
@@ -115,27 +137,30 @@ PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEn
 
 tfIdfTerm: https://github.com/NaturalNode/natural#tf-idf
 
-```
-term: string;
-tf: number;
-idf: number;
-tfidf: number;
+</p>
+</details>
+
+<details>
+<summary>responseStatus</summary>
+<p>
+
+```json
+{
+  "value": 200,
+  "type": "number",
+  "name": "responseStatus",
+  "isArray": false
+}
 ```
 
-- `responseStatus`
+</p>
+</details>
 
-```
-  {
-    value: 200,
-    type: "number",
-    name: "responseStatus",
-    isArray: false
-  }
-```
+<details>
+<summary>schemaOrg</summary>
+<p>
 
-- `schemaOrg`
-
-```
+```json
   {
     value: array of IMiccroDataScope
     type: "object",
@@ -146,9 +171,14 @@ tfidf: number;
 
 IMiccroDataScope: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/imiccrodatascope.md
 
-- `redirectChain`
+</p>
+</details>
 
-```
+<details>
+<summary>redirectChain</summary>
+<p>
+
+```json
   {
     value: array of IRedirectChainItem
     type: "object",
@@ -159,9 +189,14 @@ IMiccroDataScope: https://github.com/deepcrawl/top10-seo-list-for-developer/blob
 
 IRedirectChainItem: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/iredirectchainitem.md
 
-- `allowedInRobotsTxt`
+</p>
+</details>
 
-```
+<details>
+<summary>allowedInRobotsTxt</summary>
+<p>
+
+```json
   {
     value: IAllowedInRobotsTxt
     type: "object",
@@ -171,6 +206,9 @@ IRedirectChainItem: https://github.com/deepcrawl/top10-seo-list-for-developer/bl
 ```
 
 IAllowedInRobotsTxt: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/iallowedinrobotstxt.md
+
+</p>
+</details>
 
 ## Code Documentation
 
