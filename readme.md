@@ -41,12 +41,11 @@ yarn starts
 - **Response**
 
 ```
-[
-  {
-      value: "any",
-      type: "string|number|object|boolean"
-      name: "string name of metric",
-      isArray: true|false
+[{
+    value: "any",
+    type: "string|number|object|boolean"
+    name: "string name of metric",
+    isArray: true | false
   },
   ...
 ]
@@ -91,27 +90,25 @@ yarn starts
 <p>
 
 ```
-  {
-    value: [
-      {
-        href: "https://stackoverflow.com",
-        listeners: [{
-          type: "click",
-          useCapture: false,
-          passive: false,
-          once: false,
-          scriptId: "12",
-          lineNumber: 2,
-          columnNumber: 9085
-        }],
-        text: " Stack Overflow ",
-        healthy: true
-      }
-    ],
-    type: "object",
-    name: "internalLinks",
-    isArray: true
-  }
+{
+  value: [{
+    href: "https://stackoverflow.com",
+    listeners: [{
+      type: "click",
+      useCapture: false,
+      passive: false,
+      once: false,
+      scriptId: "12",
+      lineNumber: 2,
+      columnNumber: 9085
+    }],
+    text: " Stack Overflow ",
+    healthy: true
+  }],
+  type: "object",
+  name: "internalLinks",
+  isArray: true
+}
 ```
 
 ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/ilinkdata.md
@@ -124,25 +121,24 @@ ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master
 <p>
 
 ```
-  {
-    value: [
-        {
-          name: "first-paint",
-          entryType: "paint",
-          startTime: 1171.500000054948,
-          duration: 0
-        },
-        {
-          name: "first-contentful-paint",
-          entryType: "paint",
-          startTime: 1171.500000054948,
-          duration: 0
-        }
-    ],
-    type: "object",
-    name: "internalLinks",
-    isArray: true
-  }
+{
+  value: [{
+      name: "first-paint",
+      entryType: "paint",
+      startTime: 1171.500000054948,
+      duration: 0
+    },
+    {
+      name: "first-contentful-paint",
+      entryType: "paint",
+      startTime: 1171.500000054948,
+      duration: 0
+    }
+  ],
+  type: "object",
+  name: "internalLinks",
+  isArray: true
+}
 ```
 
 PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry
@@ -155,31 +151,30 @@ PerformanceEntry: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEn
 <p>
 
 ```
-  {
-    value: [
-      {
-        term: "http",
-        tf: 22,
-        idf: 0.3068528194400547,
-        tfidf: 6.750762027681204
-        },
-        {
-        term: "request",
-        tf: 22,
-        idf: 0.3068528194400547,
-        tfidf: 6.750762027681204
-        },
-        {
-        term: "status",
-        tf: 19,
-        idf: 0.3068528194400547,
-        tfidf: 5.830203569361039
-      }
-    ],
-    type: "object",
-    name: "internalLinks",
-    isArray: true
-  }
+{
+  value: [{
+      term: "http",
+      tf: 22,
+      idf: 0.3068528194400547,
+      tfidf: 6.750762027681204
+    },
+    {
+      term: "request",
+      tf: 22,
+      idf: 0.3068528194400547,
+      tfidf: 6.750762027681204
+    },
+    {
+      term: "status",
+      tf: 19,
+      idf: 0.3068528194400547,
+      tfidf: 5.830203569361039
+    }
+  ],
+  type: "object",
+  name: "internalLinks",
+  isArray: true
+}
 ```
 
 tfIdfTerm: https://github.com/NaturalNode/natural#tf-idf
@@ -208,21 +203,19 @@ tfIdfTerm: https://github.com/NaturalNode/natural#tf-idf
 <p>
 
 ```
-  {
-    value: [
-          {
-        @type: "Answer",
-        upvoteCount: "200",
-        text: " I recommend status code 422, "
-        Unprocessable Entity ". 11.2. 422 Unprocessable Entity The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity (hence a 415(Unsupported Media Type) status code is inappropriate), and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions. For example, this error condition may occur if an XML request body contains well-formed (i.e., syntactically correct), but semantically erroneous, XML instructions. ",
-        dateCreated: "",
-        url: "/a/3291292"
-      }
-    ]
-    type: "object",
-    name: "schemaOrg",
-    isArray: true
-  }
+{
+  value: [{
+    @type: "Answer",
+    upvoteCount: "200",
+    text: " I recommend status code 422, "
+    Unprocessable Entity ". 11.2. 422 Unprocessable Entity The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity (hence a 415(Unsupported Media Type) status code is inappropriate), and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions. For example, this error condition may occur if an XML request body contains well-formed (i.e., syntactically correct), but semantically erroneous, XML instructions. ",
+    dateCreated: "",
+    url: "/a/3291292"
+  }]
+  type: "object",
+  name: "schemaOrg",
+  isArray: true
+}
 ```
 
 IMiccroDataScope: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/imiccrodatascope.md
@@ -235,18 +228,16 @@ IMiccroDataScope: https://github.com/deepcrawl/top10-seo-list-for-developer/blob
 <p>
 
 ```
-  {
-    value: [
-            {
-        url: "https://stackoverflow.com/questions/3290182/rest-http-status-codes-for-failed-validation-or-invalid-duplicate",
-        status: 200,
-        isRedirect: false
-      }
-    ]
-    type: "object",
-    name: "redirectChain",
-    isArray: true
-  }
+{
+  value: [{
+    url: "https://stackoverflow.com/questions/3290182/rest-http-status-codes-for-failed-validation-or-invalid-duplicate",
+    status: 200,
+    isRedirect: false
+  }]
+  type: "object",
+  name: "redirectChain",
+  isArray: true
+}
 ```
 
 IRedirectChainItem: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master/docs/interfaces/iredirectchainitem.md
