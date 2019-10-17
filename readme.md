@@ -40,6 +40,10 @@ yarn starts
 
 - **Response**
 
+The endpoints response will be an array of all the metrics below, each with a unique name and interface for the value property.
+
+If value property is an array, then the `isArray` property will be `true`.
+
 ```
 [{
     value: "any",
