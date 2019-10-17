@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="608px" preserveAspectRatio="none" style="width:910px;height:608px;" version="1.1" viewBox="0 0 910 608" width="910px" zoomAndPan="magnify"><defs/><g><!--cluster MetricsExecution--><rect fill="#FFFFFF" height="581" style="stroke: #444444; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" width="885" x="14" y="16"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="80" x="416.5" y="31.5352">«boundary»</text><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="145" x="384" y="49.957">Metrics Execution</text><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="53" x="430" y="64.9336">[System]</text><!--entity apiRouter--><rect fill="#85BBF0" height="67.1094" style="stroke: #78A8D8; stroke-width: 1.5;" width="152" x="462" y="76"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="76" x="500" y="97.6016">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="132" x="472" y="115.6016">Express Routeer</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="66" x="505" y="130.5781">[Api router]</text><!--entity metricsList--><rect fill="#85BBF0" height="67.1094" style="stroke: #78A8D8; stroke-width: 1.5;" width="137" x="647.5" y="512.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="76" x="678" y="534.1016">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="117" x="657.5" y="552.1016">List of metrics</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="101" x="665.5" y="567.0781">[Array of Classes]</text><!--entity PageRenderService--><rect fill="#85BBF0" height="67.1094" style="stroke: #78A8D8; stroke-width: 1.5;" width="184" x="446" y="282"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="76" x="500" y="303.6016">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="164" x="456" y="321.6016">Page Render Service</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="103" x="486.5" y="336.5781">[TypeScript Class]</text><!--entity PageRequestHandler--><rect fill="#85BBF0" height="67.1094" style="stroke: #78A8D8; stroke-width: 1.5;" width="199" x="22.5" y="282"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="76" x="84" y="303.6016">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="179" x="32.5" y="321.6016">Page Request Handler</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="103" x="70.5" y="336.5781">[TypeScript Class]</text><!--entity puppeteer--><rect fill="#999999" height="85.9531" style="stroke: #8A8A8A; stroke-width: 1.5;" width="201" x="146.5" y="503"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="105" x="194.5" y="524.6016">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="84" x="205" y="542.6016">puppeteer</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="0" x="249" y="559.5117"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="181" x="156.5" y="576">Headless Chrome Provider</text><!--link apiRouter to PageRenderService--><path d="M518.8205,143.3301 C509.9805,160.8436 500.4724,182.925 496,204 C490.6681,229.1251 500.3892,256.1083 511.8153,277.2362 " fill="none" id="apiRouter-&gt;PageRenderService" style="stroke: #666666; stroke-width: 1.0;"/><polygon fill="#666666" points="514.2746,281.6531,513.391,271.844,511.8422,277.2847,506.4015,275.7359,514.2746,281.6531" style="stroke: #666666; stroke-width: 1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="497" y="217.5684">url: string</text><!--link PageRenderService to apiRouter--><path d="M551.4113,281.9879 C557.821,264.1873 564.785,241.7525 568,221 C571.8232,196.3214 564.8211,169.2571 556.6241,147.9732 " fill="none" id="PageRenderService-&gt;apiRouter" style="stroke: #666666; stroke-width: 1.0;"/><polygon fill="#666666" points="554.748,143.2468,554.3509,153.0876,556.5928,147.894,561.7865,150.1359,554.748,143.2468" style="stroke: #666666; stroke-width: 1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="85" x="570" y="217.5684">IMetric&lt;T&gt;[]</text><!--link PageRenderService to puppeteer--><path d="M445.8985,325.4568 C388.2464,336.581 316.9933,360.1336 274,410 C253.3574,433.9426 246.7885,469.1104 245.2861,497.6858 " fill="none" id="PageRenderService-&gt;puppeteer" style="stroke: #666666; stroke-width: 1.0;"/><polygon fill="#666666" points="245.0623,502.9405,249.4418,494.1189,245.2752,497.945,241.4491,493.7784,245.0623,502.9405" style="stroke: #666666; stroke-width: 1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="127" x="275" y="423.5684">Lanches intance of</text><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="78" x="301.5" y="438.8789">Page object</text><!--link puppeteer to PageRenderService--><path d="M322.4125,502.9518 C351.0987,485.3645 383.4787,463.9966 411,442 C445.06,414.7774 479.8793,379.461 504.4244,353.0645 " fill="none" id="puppeteer-&gt;PageRenderService" style="stroke: #666666; stroke-width: 1.0;"/><polygon fill="#666666" points="507.97,349.2367,498.9196,353.1212,504.5723,352.9049,504.7886,358.5576,507.97,349.2367" style="stroke: #666666; stroke-width: 1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="105" x="448" y="431.0684">Page, Response</text><!--link PageRequestHandler to puppeteer--><path d="M98.0674,349.2349 C82.5296,375.6255 67.9067,412.6419 84,442 C97.2915,466.247 118.9057,485.6578 142.1105,500.8343 " fill="none" id="PageRequestHandler-&gt;puppeteer" style="stroke: #666666; stroke-width: 1.0;"/><polygon fill="#666666" points="146.4602,503.619,141.0371,495.3977,142.2492,500.9232,136.7237,502.1353,146.4602,503.619" style="stroke: #666666; stroke-width: 1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="114" x="85" y="423.5684">Blocks unwanted</text><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="114" x="87" y="438.8789">requests to page</text><!--link PageRenderService to metricsList--><path d="M563.8827,349.0167 C596.5757,391.3522 652.6791,464.003 686.8492,508.2514 " fill="none" id="PageRenderService-&gt;metricsList" style="stroke: #666666; stroke-width: 1.0;"/><polygon fill="#666666" points="690.086,512.4429,687.7512,502.8748,687.03,508.4855,681.4193,507.7644,690.086,512.4429" style="stroke: #666666; stroke-width: 1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="105" x="636" y="431.0684">Page, Response</text><!--link metricsList to PageRenderService--><path d="M738.2471,512.2642 C754.3784,483.157 770.1413,441.0297 750,410 C724.3853,370.5379 678.0408,347.4149 635.2018,333.9355 " fill="none" id="metricsList-&gt;PageRenderService" style="stroke: #666666; stroke-width: 1.0;"/><polygon fill="#666666" points="630.2659,332.4196,637.6951,338.8855,635.0456,333.8874,640.0436,331.238,630.2659,332.4196" style="stroke: #666666; stroke-width: 1.0;"/><text fill="#666666" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="85" x="760" y="431.0684">IMetric&lt;T&gt;[]</text><!--
+@startuml high-level-api
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+skinparam database<<component>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+
+
+
+
+
+rectangle "==Metrics Execution\n<size:12>[System]</size>" <<boundary>> as MetricsExecution {
+    rectangle "==Express Routeer\n//<size:12>[Api router]</size>//" <<component>> as apiRouter
+    rectangle "==List of metrics\n//<size:12>[Array of Classes]</size>//" <<component>> as metricsList
+    rectangle "==Page Render Service\n//<size:12>[TypeScript Class]</size>//" <<component>> as PageRenderService
+    rectangle "==Page Request Handler\n//<size:12>[TypeScript Class]</size>//" <<component>> as PageRequestHandler
+
+    rectangle "==puppeteer\n\n Headless Chrome Provider" <<external_system>> as puppeteer
+
+    apiRouter - -> PageRenderService : "===url: string"
+    PageRenderService - -> apiRouter : "===IMetric<T>[]"
+
+    PageRenderService - -> puppeteer : "===Lanches intance of Page object"
+    puppeteer - -> PageRenderService : "===Page, Response"
+    PageRequestHandler - -> puppeteer : "===Blocks unwanted requests to page"
+    PageRenderService - -> metricsList : "===Page, Response"
+    metricsList - -> PageRenderService : "===IMetric<T>[]"
+}
+
+@enduml
+
+PlantUML version 1.2019.09(Mon Aug 26 17:19:51 BST 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 10.0.2+13
+Operating System: Mac OS X
+OS Version: 10.14.6
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>

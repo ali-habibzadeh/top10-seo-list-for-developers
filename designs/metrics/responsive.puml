@@ -1,0 +1,16 @@
+@startuml responsive
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Context.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+Component(PageRenderService, "Page Render Service", "TypeScript Class")
+
+System_Boundary(IsResponsiveCalculation, "Is Responsive Calculation") { 
+    Component(IsResponsive, "IsResponsive", "TypeScript Class")
+
+    Rel(PageRenderService, IsResponsive, "Page, Response")
+    Rel(IsResponsive, PageRenderService, "IMetricValue<boolean>")
+}
+
+@enduml

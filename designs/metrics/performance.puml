@@ -1,0 +1,16 @@
+@startuml performance
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Context.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+Component(PageRenderService, "Page Render Service", "TypeScript Class")
+
+System_Boundary(PerformanceMetricsCalculation, "Performance Metrics Calculation") { 
+    Component(PerformanceMetrics, "PerformanceMetrics", "TypeScript Class")
+
+    Rel(PageRenderService, PerformanceMetrics, "Page, Response")
+    Rel(PerformanceMetrics, PageRenderService, "IMetric<PerformanceEntry[]>")
+}
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml internal-links
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Context.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+Component(PageRenderService, "Page Render Service", "TypeScript Class")
+
+System_Boundary(InternalLinksCalculation, "Internal Links Calculation") {
+    Component(InternalLinks, "InternalLinks", "TypeScript Class")
+    Component(CDPSessionClient, "CDPSessionClient", "TypeScript Class")
+    Component(LinkHealthChecker, "LinkHealthChecker", "TypeScript Class")
+    Rel(PageRenderService, InternalLinks, "Page, Response")
+    Rel(InternalLinks, PageRenderService, "IMetric<ILinkData[]>")
+    Rel(CDPSessionClient, InternalLinks, "IRawLinkData")
+    Rel(LinkHealthChecker, InternalLinks, "boolean")
+}
+
+@enduml
