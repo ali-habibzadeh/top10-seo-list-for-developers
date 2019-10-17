@@ -11,11 +11,6 @@ export class PageRenderService {
 
   constructor(private url: string) {}
 
-  /**
-   * <uml>
-   * !include designs/high-level-api.puml
-   * </uml>
-   */
   public async getPageRenderMetrics(): Promise<IMetric<any>[]> {
     const response = await this.getResponse();
     const results = await Promise.all(metrics.map(metric => new metric(this.page, response).getMetric()));
