@@ -8,12 +8,12 @@ export abstract class BaseMetric {
 
   public async getMetric(): Promise<IMetric<any>> {
     const { name, value } = await this.getMetricValue();
-    const dataType = this.getDataType(value);
+    const { name: typeName, isArray } = this.getDataType(value);
     return {
       value,
-      type: dataType.name,
-      name: camelCase(name),
-      isArray: dataType.isArray
+      isArray,
+      type: typeName,
+      name: camelCase(name)
     };
   }
 
