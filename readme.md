@@ -6,10 +6,8 @@ A Simple API containing a curated set of metrics about the health of a webpage f
 
 ### Prerequisites
 
-```
-nodejs >=12
-yarn > 1
-```
+- nodejs >=12
+- yarn > 1
 
 ### Installing
 
