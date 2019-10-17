@@ -14,6 +14,7 @@ System_Boundary(InternalLinksCalculation, "Internal Links Calculation") {
     Component(LinkHealthChecker, "LinkHealthChecker", "TypeScript Class")
 
     System_Ext(puppeteer, "puppeteer/CDPSession", "CDP API")
+    System_Ext(cheerio, "cheerio", "jQuery on Server")
 
     Rel(metricsList, PageRenderService, "IMetric<T>[]")
     Rel(PageRenderService, metricsList, "Page, Response")
@@ -21,6 +22,7 @@ System_Boundary(InternalLinksCalculation, "Internal Links Calculation") {
     Rel(metricsList, InternalLinks, "Page, Response")
     Rel(CDPSessionClient, InternalLinks, "IRawLinkData")
     Rel(CDPSessionClient, puppeteer, "Uses CDP API")
+    Rel(puppeteer, cheerio, "Uses to get text content")
     Rel(LinkHealthChecker, InternalLinks, "boolean")
 }
 
