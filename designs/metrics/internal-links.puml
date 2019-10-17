@@ -20,7 +20,7 @@ System_Boundary(InternalLinksCalculation, "Internal Links Calculation") {
     Rel(InternalLinks, metricsList, "IMetric<ILinkData[]>")
     Rel(metricsList, InternalLinks, "Page, Response")
     Rel(CDPSessionClient, InternalLinks, "IRawLinkData")
-    Rel(puppeteer, CDPSessionClient, "IRawLinkData")
+    Rel(CDPSessionClient, puppeteer, "Uses CDP API")
     Rel(LinkHealthChecker, InternalLinks, "boolean")
 }
 
