@@ -180,7 +180,7 @@ If you like to read how each metric is calculated please refer to the [code docu
 
 ![High level API](designs/out/designs/high-level-api.svg)
 
-### Internal Links Calculation
+### Metric exampel: Internal Links
 
 ![High level API](designs/out/designs/metrics/internal-links.svg)
 
