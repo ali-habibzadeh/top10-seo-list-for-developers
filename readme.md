@@ -126,7 +126,7 @@ ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master
 ```
   {
     value: [
-          value: [{
+        {
           name: "first-paint",
           entryType: "paint",
           startTime: 1171.500000054948,
@@ -138,7 +138,6 @@ ILinkData: https://github.com/deepcrawl/top10-seo-list-for-developer/blob/master
           startTime: 1171.500000054948,
           duration: 0
         }
-      ]
     ],
     type: "object",
     name: "internalLinks",
