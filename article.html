@@ -121,7 +121,9 @@
           <li>All metrics will get their results from puppeteer's <code>Page</code> and <code>Response</code></li>
           <li>We need the response payloads to provide information about the type of data returned from each metric. We do this for better usability of our data, so another program can easily read what type the data has so it can pick the right type of handling logic against that metric.</li>
           <li>We also want all metrics to have a unique name so that they can be easily picked from the list if needed.</li>
+          <li>All metrics should implement a public method called <code>getMetricValue</code> which provides the name and the final value of that metric. This is then used by the <code>getMetric</code> method from BaseMetric to add the other information we need for all the mtrics.</li>
       </ul>
+
     <script
         src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/base-types/base-metric.ts"></script>
 
@@ -130,19 +132,116 @@
         Metric items
     </h3>
 
-    <ol>
-        <li>
+    <h4>Internal links</h4>
+    
+        <p>The easiest way of determining if a list is internal is to check for that link is not external. and we simply do
+            this
+            by checking if the href's hostname is different to the current page's href hostname. see
+            <code>isExternalLink</code>
+            method below.</p>
+    
+        <p>After this We need 4 piece of information about our links.</p>
+    
+        <ul>
+            <li>Easy: <code>href</code></li>
+            <li>Easy: Text content</li>
+            <li>Tricky: List of all event listeners attached</li>
+            <li>Tricky: Is the link health or not</li>
+        </ul>
+    
+        <p>There are no "easy" ways to extract all the event listeniners attached to an element (inline or from script)
+            without doing lots of work. Not to worry as <a href="https://chromedevtools.github.io/devtools-protocol/">Chrome
+                Developer Protocol</a> can come to the recue.</p>
+    
+        <p>How you ask? CDP amongst other tools has access to the console API of chrome. Console API contains a function in
+            the global namespace called <code>getEventListeners</code>. This function is available when you open the
+            developer toolbar in chrome but normally isn't part of the gloabal namespace.</p>
+    
+        <p>This function takes a node as argument and returns an object containing all the event listeners attached to that
+            element, making CDP an ideal choice for extracting our linkdata</p>
+    
+        <p>You can create a CDP session through puppeteer's page object, which is perfect for us as we decided all our
+            metrics will have access to the Page and Response object. To make this a little more encapsulated se wrap all the functionality we need from CDP into a class called <code>CDPSessionClient</code> so 
+            we won't pollute our metric class with it's implementation detail detail.
+        </p>
+    
+        <p>So now our <code>InternalLinks</code> metric class can extract the first three piece information for us. For health checking we will create our <code>LinkHealthChecker</code> class</p>
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/internal-links.ts"></script>
 
-            <h5>Internal links</h4>
+        <h6>CDPSessionClient</h6>
 
-            <p>The easiest way of determining if a list is internal is to check for that link is not external. and we simply do this by checking if the href's hostname is different to the current page's href hostname. see <code>isExternalLink</code> method below.</p>
+        <ul>
+            <li>
+                <p><b>Getting the <code>href</code> attribute</b></p>
+                <p>For attirbute we will use the <code>DOM.getAttributes</code> command of CDP. The response of this command is an array of attribute names and their values in the same array. Yeah a little weird but it will do.
+                So all we have to do is find what is the index of `href` in that response array and the value after that inde will be
+                the href value.</p>
+            </li>
+            <li>
+                <p><b>Getting event listeners</b></p>
+                <p>As discussed earlier we will use the debugger function for this through <code>DOMDebugger.getEventListeners</code> command. Notice that unlike DOM normal API, CDP mainly operates on nodeId (Unique DOM node identifier).</p>
+            </li>
+            <li>
+                <p><b>Getting text content</b></p>
+                <p>CDP does not have a command to get the text content of a node so we use cheerio for that. Using the <code>DOM.getOuterHTML</code> we can get the HTML of the link however this would contain HTML so by parsing it using cheerio we can use the <code>.text()</code> method to get the combined text ccontent.</p>
+            </li>
+        </ul>
 
-            <script
-                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/internal-links.ts"></script>
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/cdp/cdp-session-client.ts"></script>
 
-        </li>
-    </ol>
-   
+            <h6>LinkHealthChecker</h6>
+
+            <p>This class uses the raw information we gathered using CDP. Health checher considers a link healthy when:</p>
+
+            <ul>
+                <li>It has a value for href attribute</li>
+                <li>That value is not <code>#</code> based</li>
+                <li>that value is not javascript code (<code>javascript:</code>)</li>
+                <li>Not having event handlers is considered better but we allow them for now</li>
+            </ul>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts"></script>
+
+        <h4>No Index</h4>
+
+        <p>With simple metrics like this we don't have to go deep into CDP and we simply can rely on puppeteer's high level API.</p>
+
+        <p>Two things make a page NoIndex for bots:</p>
+        
+        <ul>
+            <li>
+                Having a <code>&lt;meta name=&#39;robots|googlebot|bingbot....&#39; content=&#39;noindex&#39;/&gt;</code> on the page.
+            </li>
+            <li>
+                Having a <code>X-Robots-Tag=noindex</code> in the response headers
+            </li>
+        </ul>
+
+        <p>As you can see, the meta tag names can be variable so the easiest way to determine meta noindex present is by looking
+            for meta tags that their <code>content</code> attibute value is <code>noindex</code> We can easily do this by
+            passing a page function into <code>page.evaluate</code></p>
+        
+        <p>For the headers we need to use the puppeteer's response object and look for the key <code>X-Robots-Tag</code> and
+            check if its value is <code>noindex</code></p>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/noindex/noindex.ts"></script>
+
+        <h4>Performance</h4>
+
+        <p>One of the newer Web APIs introduced recently is the Performance API which provides access to many of the performance-related information you would want about a page.
+            Each piece of infomration in this API is called an entry. Each entry has a type which is the group the entry belongs to.
+        </p>
+
+        <p>For our purposes we are focusing on the page rendering performance which it's metric belong to entryType called <code>paint</code>. This is the category that contains metrics such as <code>first-paint</code> and <code>first-contentful-paint</code>(FCP)</p>
+
+        <p>The lower the start time for FCP the better. <a href="https://web.dev/first-contentful-paint#what-fcp-measures" target="_blank">Lighthouse uses a particular scoring system for this.</a></p>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/performance/performance.ts"></script>
     </div>
   </body>
 </html>
