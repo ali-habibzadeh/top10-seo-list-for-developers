@@ -1,5 +1,4 @@
 import { Page, Response } from "puppeteer";
-import { URL } from "url";
 
 import { CDPSessionClient } from "../../../page-rendering/cdp/cdp-session-client";
 import { BaseMetric } from "../../base-types/base-metric";
