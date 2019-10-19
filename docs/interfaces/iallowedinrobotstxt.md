@@ -1,4 +1,4 @@
-[top10-seo-list-for-developer](../README.md) › [IAllowedInRobotsTxt](iallowedinrobotstxt.md)
+[top10-seo-list-for-developers](../README.md) › [IAllowedInRobotsTxt](iallowedinrobotstxt.md)
 
 # Interface: IAllowedInRobotsTxt
 
@@ -19,7 +19,7 @@
 
 • **isAllowed**? : *undefined | false | true*
 
-*Defined in [metrics/metric-items/robots/allowed-robots-txt.interface.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/robots/allowed-robots-txt.interface.ts#L6)*
+*Defined in [metrics/metric-items/robots/allowed-robots-txt.interface.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/robots/allowed-robots-txt.interface.ts#L6)*
 
 Returns true if crawling the specified URL is allowed for the specified user-agent.
 This will return undefined if the URL isn't valid for this robots.txt.
@@ -30,7 +30,7 @@ ___
 
 • **matchedAtLine**? : *undefined | number*
 
-*Defined in [metrics/metric-items/robots/allowed-robots-txt.interface.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/robots/allowed-robots-txt.interface.ts#L12)*
+*Defined in [metrics/metric-items/robots/allowed-robots-txt.interface.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/robots/allowed-robots-txt.interface.ts#L12)*
 
 Returns the line number of the matching directive for the specified URL and user-agent if any.
 Line numbers start at 1 and go up (1-based indexing).

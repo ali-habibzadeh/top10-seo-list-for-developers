@@ -1,4 +1,4 @@
-[top10-seo-list-for-developer](../README.md) › [IsNoIndex](isnoindex.md)
+[top10-seo-list-for-developers](../README.md) › [IsNoIndex](isnoindex.md)
 
 # Class: IsNoIndex
 
@@ -25,7 +25,7 @@
 * [getMetricValue](isnoindex.md#getmetricvalue)
 * [hasMetaNoIndex](isnoindex.md#private-hasmetanoindex)
 * [hasNoIndexHeahder](isnoindex.md#private-hasnoindexheahder)
-* [pageFunction](isnoindex.md#protected-pagefunction)
+* [pageFunction](isnoindex.md#private-pagefunction)
 
 ## Constructors
 
@@ -35,7 +35,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/noindex/noindex.ts#L7)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/noindex/noindex.ts#L7)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/noindex/noindex.ts#L9)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/noindex/noindex.ts#L9)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/noindex/noindex.ts#L9)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/noindex/noindex.ts#L9)*
 
 ## Methods
 
@@ -74,7 +74,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -86,7 +86,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:22](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/noindex/noindex.ts#L22)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:22](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/noindex/noindex.ts#L22)*
 
 Returns `true` when either page has a meta tag with `content` attribute being `noindex`
 OR if page response headers contained `X-Robots-Tag` with value `noindex`
@@ -105,7 +105,7 @@ ___
 
 ▸ **hasMetaNoIndex**(): *Promise‹boolean›*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:29](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/noindex/noindex.ts#L29)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:29](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/noindex/noindex.ts#L29)*
 
 **Returns:** *Promise‹boolean›*
 
@@ -115,16 +115,16 @@ ___
 
 ▸ **hasNoIndexHeahder**(): *boolean*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:33](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/noindex/noindex.ts#L33)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:33](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/noindex/noindex.ts#L33)*
 
 **Returns:** *boolean*
 
 ___
 
-### `Protected` pageFunction
+### `Private` pageFunction
 
 ▸ **pageFunction**(): *boolean*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/noindex/noindex.ts#L7)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/noindex/noindex.ts#L7)*
 
 **Returns:** *boolean*

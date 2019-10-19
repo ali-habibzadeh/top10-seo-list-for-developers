@@ -4,7 +4,7 @@ import { BaseMetric } from "../../base-types/base-metric";
 import { IMetricValue } from "../../base-types/metric.interface";
 
 export class PerformanceMetrics extends BaseMetric {
-  protected pageFunction = () => {
+  private pageFunction = () => {
     const perf = performance.getEntries().filter(entry => entry.entryType === "paint");
     return JSON.stringify(perf);
   };

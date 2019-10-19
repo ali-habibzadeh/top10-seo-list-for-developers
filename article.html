@@ -294,7 +294,23 @@
 
         <h4>Redirect chain</h4>
 
+        <p>Puppeteer's request object contains the chain of requests however If there are no redirects and the request
+            was successful, the chain will be empty. But for SEO purposes it's always nice to have the final link in the
+            chain included too, so for this reason we always manually add the final link ourselves.</p>
 
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/redirect-chain/redirect-chain.ts"></script>
+
+        <h4>Responsive</h4>
+
+        <p>What makes a page response is a complex debate, however we propose for simplcity that the minimum requirement
+            for being responsive is for the width of the page to follow the width of the device.</p>
+
+        <p>So based on this, if a page at least has a viewport meta tag where it's content attirbute contain
+            <code>width=device-width</code> then we consider that page responsive.</p>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/responsive/responsive.ts"></script>
 
     </div>
 </body>

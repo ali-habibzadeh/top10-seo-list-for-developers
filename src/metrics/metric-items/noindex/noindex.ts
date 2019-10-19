@@ -4,7 +4,7 @@ import { BaseMetric } from "../../base-types/base-metric";
 import { IMetricValue } from "../../base-types/metric.interface";
 
 export class IsNoIndex extends BaseMetric {
-  protected pageFunction = () => document.querySelector(`meta[content="noindex"]`) !== null;
+  private pageFunction = () => document.querySelector(`meta[content="noindex"]`) !== null;
 
   constructor(protected page: Page, protected response: Response | null) {
     super(page, response);

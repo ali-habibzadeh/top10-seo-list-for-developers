@@ -1,4 +1,4 @@
-[top10-seo-list-for-developer](../README.md) › [InternalLinks](internallinks.md)
+[top10-seo-list-for-developers](../README.md) › [InternalLinks](internallinks.md)
 
 # Class: InternalLinks
 
@@ -37,7 +37,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.ts:11](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/internal-links/internal-links.ts#L11)*
+*Defined in [metrics/metric-items/internal-links/internal-links.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/internal-links/internal-links.ts#L10)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 • **cdpSession**: *[CDPSessionClient](cdpsessionclient.md)* =  new CDPSessionClient(this.page)
 
-*Defined in [metrics/metric-items/internal-links/internal-links.ts:11](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/internal-links/internal-links.ts#L11)*
+*Defined in [metrics/metric-items/internal-links/internal-links.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/internal-links/internal-links.ts#L10)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.ts:13](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/internal-links/internal-links.ts#L13)*
+*Defined in [metrics/metric-items/internal-links/internal-links.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/internal-links/internal-links.ts#L12)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/base-types/base-metric.ts#L7)*
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 ▸ **getAllInternalLinks**(): *Promise‹[ILinkData](../interfaces/ilinkdata.md)[]›*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.ts:32](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/internal-links/internal-links.ts#L32)*
+*Defined in [metrics/metric-items/internal-links/internal-links.ts:31](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/internal-links/internal-links.ts#L31)*
 
 **Returns:** *Promise‹[ILinkData](../interfaces/ilinkdata.md)[]›*
 
@@ -92,7 +92,7 @@ ___
 
 ▸ **getAllLinksData**(): *Promise‹[ILinkData](../interfaces/ilinkdata.md)[]›*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.ts:37](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/internal-links/internal-links.ts#L37)*
+*Defined in [metrics/metric-items/internal-links/internal-links.ts:36](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/internal-links/internal-links.ts#L36)*
 
 **Returns:** *Promise‹[ILinkData](../interfaces/ilinkdata.md)[]›*
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **getLinkData**(`nodeId`: number): *Promise‹[ILinkData](../interfaces/ilinkdata.md)›*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.ts:42](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/internal-links/internal-links.ts#L42)*
+*Defined in [metrics/metric-items/internal-links/internal-links.ts:41](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/internal-links/internal-links.ts#L41)*
 
 **Parameters:**
 
@@ -120,7 +120,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -132,7 +132,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.ts:25](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/internal-links/internal-links.ts#L25)*
+*Defined in [metrics/metric-items/internal-links/internal-links.ts:24](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/internal-links/internal-links.ts#L24)*
 
 Returns a list of link data objects for all the internal links found on this page.
 
@@ -150,7 +150,7 @@ ___
 
 ▸ **isExternalLink**(`href`: string | null): *boolean*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.ts:52](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b2629c6/src/metrics/metric-items/internal-links/internal-links.ts#L52)*
+*Defined in [metrics/metric-items/internal-links/internal-links.ts:51](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/internal-links/internal-links.ts#L51)*
 
 **Parameters:**
 
