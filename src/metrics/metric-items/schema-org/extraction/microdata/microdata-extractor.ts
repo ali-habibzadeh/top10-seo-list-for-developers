@@ -11,7 +11,7 @@ export class MicrodataExtractor {
 
   constructor(private content: string) {}
 
-  public getSchema(): IMiccroDataScope[] {
+  public getMicrodata(): IMiccroDataScope[] {
     const schemas = this.scopesList.map((_i, scope) => ({
       "@type": this.getSchemaTypeName(scope),
       ...this.getPropValuesFromList(this.getScopePropertiesList(scope))

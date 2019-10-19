@@ -35,7 +35,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/metric-items/noindex/noindex.ts#L7)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/metric-items/noindex/noindex.ts#L7)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/metric-items/noindex/noindex.ts#L9)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/metric-items/noindex/noindex.ts#L9)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/metric-items/noindex/noindex.ts#L9)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/metric-items/noindex/noindex.ts#L9)*
 
 ## Methods
 
@@ -74,7 +74,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -86,7 +86,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:13](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/metric-items/noindex/noindex.ts#L13)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:13](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/metric-items/noindex/noindex.ts#L13)*
 
 **Returns:** *Promise‹[IMetricValue](../interfaces/imetricvalue.md)‹boolean››*
 
@@ -96,7 +96,7 @@ ___
 
 ▸ **hasMetaNoIndex**(): *Promise‹boolean›*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/metric-items/noindex/noindex.ts#L20)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/metric-items/noindex/noindex.ts#L20)*
 
 **Returns:** *Promise‹boolean›*
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **hasNoIndexHeahder**(): *boolean*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:24](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/metric-items/noindex/noindex.ts#L24)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:24](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/metric-items/noindex/noindex.ts#L24)*
 
 **Returns:** *boolean*
 
@@ -116,6 +116,6 @@ ___
 
 ▸ **pageFunction**(): *boolean*
 
-*Defined in [metrics/metric-items/noindex/noindex.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/metric-items/noindex/noindex.ts#L7)*
+*Defined in [metrics/metric-items/noindex/noindex.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/metric-items/noindex/noindex.ts#L7)*
 
 **Returns:** *boolean*

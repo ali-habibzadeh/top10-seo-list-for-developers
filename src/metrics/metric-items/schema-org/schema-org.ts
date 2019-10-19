@@ -15,7 +15,7 @@ export class SchemaOrg extends BaseMetric {
     const extractor = new MicrodataExtractor(content);
     return {
       name: SchemaOrg.name,
-      value: extractor.getSchema()
+      value: extractor.getMicrodata()
     };
   }
 }

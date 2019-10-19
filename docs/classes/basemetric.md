@@ -47,7 +47,7 @@
 
 \+ **new BaseMetric**(`page`: Page, `response`: Response | null): *[BaseMetric](basemetric.md)*
 
-*Defined in [metrics/base-types/base-metric.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L6)*
+*Defined in [metrics/base-types/base-metric.ts:6](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/base-types/base-metric.ts#L6)*
 
 **Parameters:**
 
@@ -64,7 +64,7 @@ Name | Type |
 
 • **page**: *Page*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/base-types/base-metric.ts#L7)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **response**: *Response | null*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/base-types/base-metric.ts#L7)*
 
 ## Methods
 
@@ -80,7 +80,7 @@ ___
 
 ▸ **getDataType**(`metricValue`: any): *object*
 
-*Defined in [metrics/base-types/base-metric.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L20)*
+*Defined in [metrics/base-types/base-metric.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/base-types/base-metric.ts#L20)*
 
 **Parameters:**
 
@@ -96,7 +96,7 @@ ___
 
 ▸ **getMetric**(): *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -106,6 +106,6 @@ ___
 
 ▸ **getMetricValue**(): *Promise‹[IMetricValue](../interfaces/imetricvalue.md)‹any››*
 
-*Defined in [metrics/base-types/base-metric.ts:30](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L30)*
+*Defined in [metrics/base-types/base-metric.ts:30](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/30b8a97/src/metrics/base-types/base-metric.ts#L30)*
 
 **Returns:** *Promise‹[IMetricValue](../interfaces/imetricvalue.md)‹any››*
