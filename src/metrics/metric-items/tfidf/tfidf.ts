@@ -8,7 +8,7 @@ import { IMetricValue } from "../../base-types/metric.interface";
 export class TfIdfScore extends BaseMetric {
   private tfidf = new TfIdf();
   private pageFunction = () => {
-    const selectors = "p, h1, h2, h3, h4, h5";
+    const selectors = "p, h1, h2, h3, h4, h5, h6";
     const links = [...document.querySelectorAll(selectors)];
     return links.map(node => node.textContent).join("");
   };
