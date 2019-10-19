@@ -25,7 +25,7 @@ Metric value for inernal links
 
 • **healthy**: *boolean*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.interface.ts:34](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/internal-links/internal-links.interface.ts#L34)*
+*Defined in [metrics/metric-items/internal-links/internal-links.interface.ts:34](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/internal-links/internal-links.interface.ts#L34)*
 
 Is true when link is deemed healthy. A link a healthy when:
 1. Has a value for href attribute AND has no event listenders attached AND the href value is not a hash based value AND href is not javascript code
@@ -41,7 +41,7 @@ ___
 
 *Inherited from [IRawLinkData](irawlinkdata.md).[href](irawlinkdata.md#href)*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.interface.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/internal-links/internal-links.interface.ts#L7)*
+*Defined in [metrics/metric-items/internal-links/internal-links.interface.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/internal-links/internal-links.interface.ts#L7)*
 
 value of the href attribute of an HTMLAnchorElement as it is inside the page and not parsed
 
@@ -53,7 +53,7 @@ ___
 
 *Inherited from [IRawLinkData](irawlinkdata.md).[listeners](irawlinkdata.md#listeners)*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.interface.ts:15](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/internal-links/internal-links.interface.ts#L15)*
+*Defined in [metrics/metric-items/internal-links/internal-links.interface.ts:15](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/internal-links/internal-links.interface.ts#L15)*
 
 Collection of event listeners attached to this anchor element.
 Extracted using `DOMDebugger.getEventListeners`from devtools-protocol
@@ -70,7 +70,7 @@ ___
 
 *Inherited from [IRawLinkData](irawlinkdata.md).[text](irawlinkdata.md#text)*
 
-*Defined in [metrics/metric-items/internal-links/internal-links.interface.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/internal-links/internal-links.interface.ts#L20)*
+*Defined in [metrics/metric-items/internal-links/internal-links.interface.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/internal-links/internal-links.interface.ts#L20)*
 
 Combined text contents from the elements inside this anchor
 

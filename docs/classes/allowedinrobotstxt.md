@@ -35,7 +35,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/robots/allowed-robots-txt.ts#L10)*
+*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/robots/allowed-robots-txt.ts#L10)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:11](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/robots/allowed-robots-txt.ts#L11)*
+*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:11](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/robots/allowed-robots-txt.ts#L11)*
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 • **pageUrl**: *string* =  this.page.url()
 
-*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/robots/allowed-robots-txt.ts#L10)*
+*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/robots/allowed-robots-txt.ts#L10)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/base-types/base-metric.ts#L7)*
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -94,7 +94,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:15](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/robots/allowed-robots-txt.ts#L15)*
+*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:15](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/robots/allowed-robots-txt.ts#L15)*
 
 **Returns:** *Promise‹[IMetricValue](../interfaces/imetricvalue.md)‹[IAllowedInRobotsTxt](../interfaces/iallowedinrobotstxt.md)››*
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **getRobotsParser**(): *Promise‹Robots›*
 
-*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:26](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/robots/allowed-robots-txt.ts#L26)*
+*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:26](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/robots/allowed-robots-txt.ts#L26)*
 
 **Returns:** *Promise‹Robots›*
 
@@ -114,6 +114,6 @@ ___
 
 ▸ **getRobotsTxt**(): *Promise‹string›*
 
-*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:31](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/robots/allowed-robots-txt.ts#L31)*
+*Defined in [metrics/metric-items/robots/allowed-robots-txt.ts:31](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/robots/allowed-robots-txt.ts#L31)*
 
 **Returns:** *Promise‹string›*
