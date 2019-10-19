@@ -35,7 +35,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:14](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/tf–idf/tf–idf.ts#L14)*
+Defined in metrics/metric-items/tfidf/tfidf.ts:14
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:16](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/tf–idf/tf–idf.ts#L16)*
+Defined in metrics/metric-items/tfidf/tfidf.ts:16
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L7)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **tfidf**: *TfIdf* =  new TfIdf()
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/tf–idf/tf–idf.ts#L9)*
+Defined in metrics/metric-items/tfidf/tfidf.ts:9
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/38108d7/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -94,7 +94,7 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/tf–idf/tf–idf.ts#L20)*
+Defined in metrics/metric-items/tfidf/tfidf.ts:20
 
 **Returns:** *Promise‹[IMetricValue](../interfaces/imetricvalue.md)‹TfIdfTerm[]››*
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **getTfIdf**(): *Promise‹TfIdfTerm[]›*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:27](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/tf–idf/tf–idf.ts#L27)*
+Defined in metrics/metric-items/tfidf/tfidf.ts:27
 
 **Returns:** *Promise‹TfIdfTerm[]›*
 
@@ -114,6 +114,6 @@ ___
 
 ▸ **pageFunction**(): *string*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/b4206b2/src/metrics/metric-items/tf–idf/tf–idf.ts#L10)*
+Defined in metrics/metric-items/tfidf/tfidf.ts:10
 
 **Returns:** *string*

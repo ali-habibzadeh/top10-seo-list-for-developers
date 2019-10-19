@@ -6,7 +6,7 @@ import { IsResponsive } from "./metric-items/responsive/responsive";
 import { AllowedInRobotsTxt } from "./metric-items/robots/allowed-robots-txt";
 import { SchemaOrg } from "./metric-items/schema-org/schema-org";
 import { ResponseStatus } from "./metric-items/status/status";
-import { TfIdfScore } from "./metric-items/tf–idf/tf–idf";
+import { TfIdfScore } from "./metric-items/tfidf/tfidf";
 
 export const metricsList = [
   IsResponsive,

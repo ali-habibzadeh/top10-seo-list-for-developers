@@ -32,7 +32,7 @@
             a port</p>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/index.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/index.ts?footer=no"></script>
 
         <p>
             Create an instance of Express Router and add a <code>get</code> route matcher on path
@@ -41,7 +41,7 @@
         </p>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/api/routes.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/api/routes.ts?footer=no"></script>
 
         <p>
             Now let's create our handler function. It needs to be able to read the query string parameter for
@@ -50,7 +50,7 @@
         </p>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/api/page-health.route.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/api/page-health.route.ts?footer=no"></script>
 
         <p>
             Here is how we validate the URL. URL class throws an error when the passed string can not be constrcted into
@@ -59,7 +59,7 @@
         </p>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/utils/url.utils.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/utils/url.utils.ts?footer=no"></script>
 
         <p>Ok now we are done with our general scaffolding for the API side. Let's build some software!</p>
 
@@ -76,7 +76,7 @@
         </ul>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/page-render.service.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/page-render.service.ts?footer=no"></script>
 
         <p>But as always the devil is in the details and there are few gotchas invovled:</p>
 
@@ -91,10 +91,10 @@
                     that would disable most of what we won't need.
                 </p>
                 <script
-                    src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/launch-options.ts"></script>
+                    src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/launch-options.ts?footer=no"></script>
 
                 <p>We won't go into much details but you can checkout the list of
-                    <a href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/chrome-switches.ts"
+                    <a href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/chrome-switches.ts?footer=no"
                         target="_blank">switches passed into chrome</a>
                     for disabling various features and Web APIs. You can also see the <a
                         href="https://peter.sh/experiments/chromium-command-line-switches/" target="_blank">full list of
@@ -106,23 +106,23 @@
                     We don't want to request any possible large assets of the page. Specially if they don't help us in
                     calculation
                     of our metrics. so we need to abort the requests that are made to <a
-                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/blocked-resource-types.ts"
+                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/blocked-resource-types.ts?footer=no"
                         target="_blank">such resources</a>.
                 </p>
 
                 <p>We also don't want our test to run any Analytics events so we would need to create a list of <a
-                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/analytics-rejections.ts"
+                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/analytics-rejections.ts?footer=no"
                         target="_blank">typical analytics servers</a> too.</p>
 
                 <p>And finally we need to also block any reqeust made to well known <a
-                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/ad-rejections.ts"
+                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/ad-rejections.ts?footer=no"
                         target="_blank">Advertising servers</a>, as they just slow down the whoe process.</p>
 
                 <p>Now we are able to easily check whether the request URL is ResourceType is maching any of these
                     types. And if so we can <code>.abort</code> the request and otherwise we simply
                     <code>.continue</code></p>
                 <script
-                    src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/page-request.handler.ts"></script>
+                    src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/page-request.handler.ts?footer=no"></script>
             </li>
         </ol>
 
@@ -149,7 +149,7 @@
         </ul>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/base-types/base-metric.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/base-types/base-metric.ts?footer=no"></script>
 
 
         <h3>
@@ -197,7 +197,7 @@
         <p>So now our <code>InternalLinks</code> metric class can extract the first three piece information for us. For
             health checking we will create our <code>LinkHealthChecker</code> class</p>
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/internal-links.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/internal-links.ts?footer=no"></script>
 
         <h6>CDPSessionClient</h6>
 
@@ -227,7 +227,7 @@
         </ul>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/cdp/cdp-session-client.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/cdp/cdp-session-client.ts?footer=no"></script>
 
         <h6>LinkHealthChecker</h6>
 
@@ -241,7 +241,7 @@
         </ul>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts?footer=no"></script>
 
         <h4>No Index</h4>
 
@@ -271,7 +271,7 @@
             check if its value is <code>noindex</code></p>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/noindex/noindex.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/noindex/noindex.ts?footer=no"></script>
 
         <h4>Performance</h4>
 
@@ -290,7 +290,7 @@
                 target="_blank">Lighthouse uses a particular scoring system for this.</a> which you may embrace.</p>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/performance/performance.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/performance/performance.ts?footer=no"></script>
 
         <h4>Redirect chain</h4>
 
@@ -299,7 +299,7 @@
             chain included too, so for this reason we always manually add the final link ourselves.</p>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/redirect-chain/redirect-chain.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/redirect-chain/redirect-chain.ts?footer=no"></script>
 
         <h4>Responsive</h4>
 
@@ -310,7 +310,34 @@
             <code>width=device-width</code> then we consider that page responsive.</p>
 
         <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/responsive/responsive.ts"></script>
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/responsive/responsive.ts?footer=no"></script>
+
+
+        <h4>robots.txs</h4>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/robots/allowed-robots-txt.ts?footer=no"></script>
+
+        <h4>schema.org</h4>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/schema-org/schema-org.ts?footer=no"></script>
+
+        <h5>Schema Extraction</h5>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts?footer=no"></script>
+
+        <h4>status code</h4>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/status/status.ts?footer=no"></script>
+
+        <h4>tf-idf</h4>
+
+        <script
+            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/tf%E2%80%93idf/tf%E2%80%93idf.ts?footer=no"></script>
+
 
     </div>
 </body>
