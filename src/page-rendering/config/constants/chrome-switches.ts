@@ -1,6 +1,7 @@
 export const chromiumSwitches = [
   "--blink-settings=allowFileAccessFromFileURLs=false",
   "--process-per-tab",
+  "--disk-cache-dir=./Temp/browser-cache-disk",
   "--disable-notifications",
   "--disable-remote-fonts",
   "--disable-webgl",
