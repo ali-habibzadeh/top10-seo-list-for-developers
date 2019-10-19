@@ -31,7 +31,7 @@
 
 \+ **new PageRenderService**(`url`: string): *[PageRenderService](pagerenderservice.md)*
 
-*Defined in [page-rendering/page-render.service.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/page-render.service.ts#L10)*
+*Defined in [page-rendering/page-render.service.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/page-render.service.ts#L10)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **browser**: *Browser*
 
-*Defined in [page-rendering/page-render.service.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/page-render.service.ts#L9)*
+*Defined in [page-rendering/page-render.service.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/page-render.service.ts#L9)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **page**: *Page*
 
-*Defined in [page-rendering/page-render.service.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/page-render.service.ts#L10)*
+*Defined in [page-rendering/page-render.service.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/page-render.service.ts#L10)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **url**: *string*
 
-*Defined in [page-rendering/page-render.service.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/page-render.service.ts#L12)*
+*Defined in [page-rendering/page-render.service.ts:12](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/page-render.service.ts#L12)*
 
 ## Methods
 
@@ -71,7 +71,7 @@ ___
 
 ▸ **close**(): *Promise‹void›*
 
-*Defined in [page-rendering/page-render.service.ts:33](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/page-render.service.ts#L33)*
+*Defined in [page-rendering/page-render.service.ts:33](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/page-render.service.ts#L33)*
 
 **Returns:** *Promise‹void›*
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **getPageRenderMetrics**(): *Promise‹[IMetric](../interfaces/imetric.md)‹any›[]›*
 
-*Defined in [page-rendering/page-render.service.ts:14](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/page-render.service.ts#L14)*
+*Defined in [page-rendering/page-render.service.ts:14](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/page-render.service.ts#L14)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any›[]›*
 
@@ -91,7 +91,7 @@ ___
 
 ▸ **getResponse**(): *Promise‹Response | null›*
 
-*Defined in [page-rendering/page-render.service.ts:21](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/page-render.service.ts#L21)*
+*Defined in [page-rendering/page-render.service.ts:21](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/page-render.service.ts#L21)*
 
 **Returns:** *Promise‹Response | null›*
 
@@ -101,6 +101,6 @@ ___
 
 ▸ **setPageHandlers**(): *Promise‹void›*
 
-*Defined in [page-rendering/page-render.service.ts:28](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/page-render.service.ts#L28)*
+*Defined in [page-rendering/page-render.service.ts:28](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/page-render.service.ts#L28)*
 
 **Returns:** *Promise‹void›*

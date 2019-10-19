@@ -12,15 +12,6 @@ export class AllowedInRobotsTxt extends BaseMetric {
     super(page, response);
   }
 
-  /**
-   * Determines whether this URL is allowed by robots.txt or not.
-   * User agent is `*`
-   *
-   * @returns {Object} IMetricValue
-   * @property {string} `name` - The name of this metric
-   * @property {Object<IAllowedInRobotsTxt>} `value` - The value of this metric
-   *
-   */
   public async getMetricValue(): Promise<IMetricValue<IAllowedInRobotsTxt>> {
     const parser = await this.getRobotsParser();
     return {

@@ -10,15 +10,6 @@ export class IsNoIndex extends BaseMetric {
     super(page, response);
   }
 
-  /**
-   * Returns `true` when either page has a meta tag with `content` attribute being `noindex`
-   * OR if page response headers contained `X-Robots-Tag` with value `noindex`
-   *
-   * @returns {Object} IMetricValue
-   * @property {string} `name` - The name of this metric
-   * @property {boolean} `value` - The value of this metric
-   *
-   */
   public async getMetricValue(): Promise<IMetricValue<boolean>> {
     return {
       name: IsNoIndex.name,

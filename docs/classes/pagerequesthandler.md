@@ -29,7 +29,7 @@
 
 \+ **new PageRequestHandler**(`request`: Request): *[PageRequestHandler](pagerequesthandler.md)*
 
-*Defined in [page-rendering/config/page-request.handler.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/config/page-request.handler.ts#L9)*
+*Defined in [page-rendering/config/page-request.handler.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/config/page-request.handler.ts#L9)*
 
 **Parameters:**
 
@@ -45,7 +45,7 @@ Name | Type |
 
 • **request**: *Request*
 
-*Defined in [page-rendering/config/page-request.handler.ts:11](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/config/page-request.handler.ts#L11)*
+*Defined in [page-rendering/config/page-request.handler.ts:11](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/config/page-request.handler.ts#L11)*
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 • **resourceType**: *"font" | "script" | "image" | "document" | "stylesheet" | "media" | "texttrack" | "xhr" | "fetch" | "eventsource" | "websocket" | "manifest" | "other"* =  this.request.resourceType()
 
-*Defined in [page-rendering/config/page-request.handler.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/config/page-request.handler.ts#L9)*
+*Defined in [page-rendering/config/page-request.handler.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/config/page-request.handler.ts#L9)*
 
 ## Methods
 
@@ -61,7 +61,7 @@ ___
 
 ▸ **globMatchesUrl**(`glob`: string): *boolean*
 
-*Defined in [page-rendering/config/page-request.handler.ts:24](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/config/page-request.handler.ts#L24)*
+*Defined in [page-rendering/config/page-request.handler.ts:24](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/config/page-request.handler.ts#L24)*
 
 **Parameters:**
 
@@ -77,7 +77,7 @@ ___
 
 ▸ **handle**(): *Promise‹void›*
 
-*Defined in [page-rendering/config/page-request.handler.ts:13](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/config/page-request.handler.ts#L13)*
+*Defined in [page-rendering/config/page-request.handler.ts:13](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/config/page-request.handler.ts#L13)*
 
 **Returns:** *Promise‹void›*
 
@@ -87,6 +87,6 @@ ___
 
 ▸ **isBlocked**(): *boolean*
 
-*Defined in [page-rendering/config/page-request.handler.ts:17](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/page-rendering/config/page-request.handler.ts#L17)*
+*Defined in [page-rendering/config/page-request.handler.ts:17](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/page-rendering/config/page-request.handler.ts#L17)*
 
 **Returns:** *boolean*

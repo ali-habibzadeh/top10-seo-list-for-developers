@@ -11,14 +11,6 @@ export class SchemaExtractor {
 
   constructor(private content: string) {}
 
-  /**
-   * Extracts the microdata within the document and returns an array objects for each scope found.
-   *
-   * @returns {Array.IMiccroDataScope} List of schema scopes
-   * @property {string} `@type` - The type name for the item scope. e.g. Person
-   * @property {[key: string]: string} `...` Key value pairs of the properties and their values within this scope
-   *
-   */
   public getSchema(): IMiccroDataScope[] {
     const schemas = this.scopesList.map((_i, scope) => ({
       "@type": this.getSchemaTypeName(scope),

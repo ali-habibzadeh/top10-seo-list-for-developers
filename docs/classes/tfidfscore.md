@@ -35,7 +35,7 @@
 
 *Overrides [BaseMetric](basemetric.md).[constructor](basemetric.md#constructor)*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:14](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/tf–idf/tf–idf.ts#L14)*
+*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:14](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/tf–idf/tf–idf.ts#L14)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 *Overrides [BaseMetric](basemetric.md).[page](basemetric.md#protected-page)*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:16](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/tf–idf/tf–idf.ts#L16)*
+*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:16](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/tf–idf/tf–idf.ts#L16)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[response](basemetric.md#protected-response)*
 
-*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/base-types/base-metric.ts#L7)*
+*Defined in [metrics/base-types/base-metric.ts:7](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/base-types/base-metric.ts#L7)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **tfidf**: *TfIdf* =  new TfIdf()
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/tf–idf/tf–idf.ts#L9)*
+*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/tf–idf/tf–idf.ts#L9)*
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 *Inherited from [BaseMetric](basemetric.md).[getMetric](basemetric.md#getmetric)*
 
-*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/base-types/base-metric.ts#L9)*
+*Defined in [metrics/base-types/base-metric.ts:9](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/base-types/base-metric.ts#L9)*
 
 **Returns:** *Promise‹[IMetric](../interfaces/imetric.md)‹any››*
 
@@ -94,21 +94,9 @@ ___
 
 *Overrides [BaseMetric](basemetric.md).[getMetricValue](basemetric.md#abstract-getmetricvalue)*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:32](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/tf–idf/tf–idf.ts#L32)*
-
-Returns list of first 10 key words sorted by their importance.
-
-Term Frequency–Inverse Document Frequency (tf-idf) is implemented to determine how important a word (or words) is to a document relative to a corpus.
-
-**`see`** https://en.wikipedia.org/wiki/Tf%E2%80%93idf
-
-**`property`** {String} `name` - The name of this metric
-
-**`property`** {Array.<TfIdfTerm>} `value` - The value of this metric
+*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:20](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/tf–idf/tf–idf.ts#L20)*
 
 **Returns:** *Promise‹[IMetricValue](../interfaces/imetricvalue.md)‹TfIdfTerm[]››*
-
-IMetricValue
 
 ___
 
@@ -116,7 +104,7 @@ ___
 
 ▸ **getTfIdf**(): *Promise‹TfIdfTerm[]›*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:39](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/tf–idf/tf–idf.ts#L39)*
+*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:27](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/tf–idf/tf–idf.ts#L27)*
 
 **Returns:** *Promise‹TfIdfTerm[]›*
 
@@ -126,6 +114,6 @@ ___
 
 ▸ **pageFunction**(): *string*
 
-*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/c60e990/src/metrics/metric-items/tf–idf/tf–idf.ts#L10)*
+*Defined in [metrics/metric-items/tf–idf/tf–idf.ts:10](https://github.com/deepcrawl/top10-seo-list-for-developer/blob/dd20eba/src/metrics/metric-items/tf–idf/tf–idf.ts#L10)*
 
 **Returns:** *string*

@@ -13,14 +13,6 @@ export class InternalLinks extends BaseMetric {
     super(page, response);
   }
 
-  /**
-   * Returns a list of link data objects for all the internal links found on this page.
-   *
-   * @returns {Object} IMetricValue
-   * @property {string} `name` - The name of this metric
-   * @property {Array.<ILinkData>} `value` - The value of this metric
-   *
-   */
   public async getMetricValue(): Promise<IMetricValue<ILinkData[]>> {
     return {
       value: await this.getAllInternalLinks(),

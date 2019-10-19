@@ -9,14 +9,6 @@ export class ResponseStatus extends BaseMetric {
     super(page, response);
   }
 
-  /**
-   * Contains the status code of the response (e.g., 200 for a success).
-   *
-   * @returns {Object} List of schema scopes found
-   * @property {String} `name` - The name of this metric
-   * @property {Number} `value` - Contains the status code of the response (e.g., 200 for a success).
-   *
-   */
   public async getMetricValue(): Promise<IMetricValue<number>> {
     return {
       name: camelCase(ResponseStatus.name),

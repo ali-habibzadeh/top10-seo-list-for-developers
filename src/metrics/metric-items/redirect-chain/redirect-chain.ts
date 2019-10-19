@@ -11,15 +11,6 @@ export class RedirectChain extends BaseMetric {
     super(page, response);
   }
 
-  /**
-   * Returns the list of redirects that has happened until the final page is reached.
-   * There is always at least 1 item returned if no redirections take place.
-   *
-   * @returns {Object} IMetricValue
-   * @property {String} `name` - The name of this metric
-   * @property {Array.<IRedirectChainItem[]>} `value` - The value of this metric
-   *
-   */
   public async getMetricValue(): Promise<IMetricValue<IRedirectChainItem[]>> {
     return {
       name: RedirectChain.name,

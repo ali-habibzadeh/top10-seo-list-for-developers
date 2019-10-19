@@ -17,18 +17,6 @@ export class TfIdfScore extends BaseMetric {
     super(page, response);
   }
 
-  /**
-   * Returns list of first 10 key words sorted by their importance.
-   *
-   * Term Frequency–Inverse Document Frequency (tf-idf) is implemented to determine how important a word (or words) is to a document relative to a corpus.
-   * @see https://en.wikipedia.org/wiki/Tf%E2%80%93idf
-   *
-   *
-   * @returns {Object} IMetricValue
-   * @property {String} `name` - The name of this metric
-   * @property {Array.<TfIdfTerm>} `value` - The value of this metric
-   *
-   */
   public async getMetricValue(): Promise<IMetricValue<TfIdfTerm[]>> {
     return {
       name: camelCase(TfIdfScore.name),

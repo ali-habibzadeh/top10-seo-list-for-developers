@@ -13,15 +13,6 @@ export class PerformanceMetrics extends BaseMetric {
     super(page, response);
   }
 
-  /**
-   * Returns the list of paint performance entries.
-   * @see https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry
-   *
-   * @returns {Object} IMetricValue
-   * @property {String} `name` - The name of this metric
-   * @property {Array.<PerformanceEntry>} `value` - The value of this metric
-   *
-   */
   public async getMetricValue(): Promise<IMetricValue<PerformanceEntry[]>> {
     return {
       name: PerformanceMetrics.name,
