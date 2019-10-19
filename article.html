@@ -26,318 +26,372 @@
             </p>
         </div>
 
-        <h2>Express Server and Router</h2>
-
-        <p>Create and insrance of Express server and set it to use our apiRouter on <code>/api</code> path and listen on
-            a port</p>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/index.ts?footer=no"></script>
-
-        <p>
-            Create an instance of Express Router and add a <code>get</code> route matcher on path
-            <code>/page-leath</code> to use our main handler function. This now makes your API route to be
-            <code>/api/page-health</code>.
-        </p>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/api/routes.ts?footer=no"></script>
-
-        <p>
-            Now let's create our handler function. It needs to be able to read the query string parameter for
-            <code>?url=</code> and validate it. If it checks out we can pass it to our render service to process it.
-            Otherwise we send an error response to the user to correct the faulty parameter.
-        </p>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/api/page-health.route.ts?footer=no"></script>
-
-        <p>
-            Here is how we validate the URL. URL class throws an error when the passed string can not be constrcted into
-            a
-            URL instance. So it's an easy to to validate a string.
-        </p>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/utils/url.utils.ts?footer=no"></script>
-
-        <p>Ok now we are done with our general scaffolding for the API side. Let's build some software!</p>
-
-        <h2>Rendering Pages</h2>
-
-        <p>Our core service for the app is our render service. with few simple duties:</p>
-
-        <ul>
-            <li>Take the URL passed to it from API router</li>
-            <li>Create a puppeteer browser</li>
-            <li>Create a page and response object and pass it to all our metrics</li>
-            <li>Return the results from all metrics</li>
-            <li>Close browser</li>
-        </ul>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/page-render.service.ts?footer=no"></script>
-
-        <p>But as always the devil is in the details and there are few gotchas invovled:</p>
-
-        <ol>
-            <li>
-                <h4>Chrome switches</h4>
-                <p>
-                    We don't want to run many APIs chrome comes with out of the box, they are to slow down our service.
-                    For this
-                    we will use a custom <code>launchOptions</code> for puppeteer's <code>launch</code> function, so we
-                    can pass in a set a chrome swtiches</a>
-                    that would disable most of what we won't need.
-                </p>
-                <script
-                    src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/launch-options.ts?footer=no"></script>
-
-                <p>We won't go into much details but you can checkout the list of
-                    <a href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/chrome-switches.ts?footer=no"
-                        target="_blank">switches passed into chrome</a>
-                    for disabling various features and Web APIs. You can also see the <a
-                        href="https://peter.sh/experiments/chromium-command-line-switches/" target="_blank">full list of
-                        args that chrome takes</a>.</p>
-            </li>
-            <li>
-                <h4>Rejection tokens</h4>
-                <p>
-                    We don't want to request any possible large assets of the page. Specially if they don't help us in
-                    calculation
-                    of our metrics. so we need to abort the requests that are made to <a
-                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/blocked-resource-types.ts?footer=no"
-                        target="_blank">such resources</a>.
-                </p>
-
-                <p>We also don't want our test to run any Analytics events so we would need to create a list of <a
-                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/analytics-rejections.ts?footer=no"
-                        target="_blank">typical analytics servers</a> too.</p>
-
-                <p>And finally we need to also block any reqeust made to well known <a
-                        href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/ad-rejections.ts?footer=no"
-                        target="_blank">Advertising servers</a>, as they just slow down the whoe process.</p>
-
-                <p>Now we are able to easily check whether the request URL is ResourceType is maching any of these
-                    types. And if so we can <code>.abort</code> the request and otherwise we simply
-                    <code>.continue</code></p>
-                <script
-                    src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/page-request.handler.ts?footer=no"></script>
-            </li>
-        </ol>
-
-        <p>This consititues all the lifting that needs to be done before we can finally add some metrics to our API.</p>
-
-        <h2>The metrics</h2>
-
-        <p>We want all our metrics to have the same blue print as we simply want to pass them all as an array into our
-            rednering service and get a consistent set of results from them. To do so we need to create a blue print
-            abstract class which they all will extend.</p>
-
-        <p>The base metric will set few standards for our metrics:</p>
-
-        <ul>
-            <li>All metrics will get their results from puppeteer's <code>Page</code> and <code>Response</code></li>
-            <li>We need the response payloads to provide information about the type of data returned from each metric.
-                We do this for better usability of our data, so another program can easily read what type the data has
-                so it can pick the right type of handling logic against that metric.</li>
-            <li>We also want all metrics to have a unique name so that they can be easily picked from the list if
-                needed.</li>
-            <li>All metrics should implement a public method called <code>getMetricValue</code> which provides the name
-                and the final value of that metric. This is then used by the <code>getMetric</code> method from
-                BaseMetric to add the other information we need for all the mtrics.</li>
-        </ul>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/base-types/base-metric.ts?footer=no"></script>
-
-
-        <h3>
-            Metric items
-        </h3>
-
-        <h4>Internal links</h4>
-
-        <p>The easiest way of determining if a list is internal is to check for that link is not external. and we simply
-            do
-            this
-            by checking if the href's hostname is different to the current page's href hostname. see
-            <code>isExternalLink</code>
-            method below.</p>
-
-        <p>After this We need 4 piece of information about our links.</p>
-
-        <ul>
-            <li>Easy: <code>href</code></li>
-            <li>Easy: Text content</li>
-            <li>Tricky: List of all event listeners attached</li>
-            <li>Tricky: Is the link health or not</li>
-        </ul>
-
-        <p>There are no "easy" ways to extract all the event listeniners attached to an element (inline or from script)
-            without doing lots of work. Not to worry as <a
-                href="https://chromedevtools.github.io/devtools-protocol/">Chrome
-                Developer Protocol</a> can come to the recue.</p>
-
-        <p>How you ask? CDP amongst other tools has access to the console API of chrome. Console API contains a function
-            in
-            the global namespace called <code>getEventListeners</code>. This function is available when you open the
-            developer toolbar in chrome but normally isn't part of the gloabal namespace.</p>
-
-        <p>This function takes a node as argument and returns an object containing all the event listeners attached to
-            that
-            element, making CDP an ideal choice for extracting our linkdata</p>
-
-        <p>You can create a CDP session through puppeteer's page object, which is perfect for us as we decided all our
-            metrics will have access to the Page and Response object. To make this a little more encapsulated se wrap
-            all the functionality we need from CDP into a class called <code>CDPSessionClient</code> so
-            we won't pollute our metric class with it's implementation detail detail.
-        </p>
-
-        <p>So now our <code>InternalLinks</code> metric class can extract the first three piece information for us. For
-            health checking we will create our <code>LinkHealthChecker</code> class</p>
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/internal-links.ts?footer=no"></script>
-
-        <h6>CDPSessionClient</h6>
-
-        <ul>
-            <li>
-                <p><b>Getting the <code>href</code> attribute</b></p>
-                <p>For attirbute we will use the <code>DOM.getAttributes</code> command of CDP. The response of this
-                    command is an array of attribute names and their values in the same array. Yeah a little weird but
-                    it will do.
-                    So all we have to do is find what is the index of `href` in that response array and the value after
-                    that inde will be
-                    the href value.</p>
-            </li>
-            <li>
-                <p><b>Getting event listeners</b></p>
-                <p>As discussed earlier we will use the debugger function for this through
-                    <code>DOMDebugger.getEventListeners</code> command. Notice that unlike DOM normal API, CDP mainly
-                    operates on nodeId (Unique DOM node identifier).</p>
-            </li>
-            <li>
-                <p><b>Getting text content</b></p>
-                <p>CDP does not have a command to get the text content of a node so we use cheerio for that. Using the
-                    <code>DOM.getOuterHTML</code> we can get the HTML of the link however this would contain HTML so by
-                    parsing it using cheerio we can use the <code>.text()</code> method to get the combined text
-                    content.</p>
-            </li>
-        </ul>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/cdp/cdp-session-client.ts?footer=no"></script>
-
-        <h6>LinkHealthChecker</h6>
-
-        <p>This class uses the raw information we gathered using CDP. Health checher considers a link healthy when:</p>
-
-        <ul>
-            <li>It has a value for href attribute</li>
-            <li>That value is not <code>#</code> based</li>
-            <li>that value is not javascript code (<code>javascript:</code>)</li>
-            <li>Not having event handlers is considered better but we allow them for now</li>
-        </ul>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts?footer=no"></script>
-
-        <h4>No Index</h4>
-
-        <p>With simple metrics like this we don't have to go deep into CDP and we simply can rely on puppeteer's high
-            level API.</p>
-
-        <p>Two things make a page NoIndex for bots:</p>
-
-        <ul>
-            <li>
-                Having a
-                <code>&lt;meta name=&#39;robots|googlebot|bingbot....&#39; content=&#39;noindex&#39;/&gt;</code> on the
-                page.
-            </li>
-            <li>
-                Having a <code>X-Robots-Tag=noindex</code> in the response headers
-            </li>
-        </ul>
-
-        <p>As you can see robots meta tag is not mononymous so the easiest way to determine meta noindex is by looking
-            for meta tags that their <code>content</code> attribute value is <code>noindex</code>. We can easily do this
-            by
-            passing a page function into <code>page.evaluate</code></p>
-
-        <p>For the headers we need to use the puppeteer's response object and look for the key <code>X-Robots-Tag</code>
-            and
-            check if its value is <code>noindex</code></p>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/noindex/noindex.ts?footer=no"></script>
-
-        <h4>Performance</h4>
-
-        <p>One of the newer Web APIs introduced recently is the Performance API which provides access to many of the
-            performance-related information you would want about a page.
-            Each piece of infomration in this API is called an entry. Each entry has a type which is the group the entry
-            belongs to.
-        </p>
-
-        <p>For our purposes we are focusing on the page rendering performance which it's metric belong to entryType
-            called <code>paint</code>. This is the category that contains metrics such as <code>first-paint</code> and
-            <code>first-contentful-paint</code> (FCP)</p>
-
-        <p>As far as FCP goes the lower the start time the better. <a
-                href="https://web.dev/first-contentful-paint#how-lighthouse-determines-your-fcp-score"
-                target="_blank">Lighthouse uses a particular scoring system for this.</a> which you may embrace.</p>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/performance/performance.ts?footer=no"></script>
-
-        <h4>Redirect chain</h4>
-
-        <p>Puppeteer's request object contains the chain of requests however If there are no redirects and the request
-            was successful, the chain will be empty. But for SEO purposes it's always nice to have the final link in the
-            chain included too, so for this reason we always manually add the final link ourselves.</p>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/redirect-chain/redirect-chain.ts?footer=no"></script>
-
-        <h4>Responsive</h4>
-
-        <p>What makes a page response is a complex debate, however we propose for simplcity that the minimum requirement
-            for being responsive is for the width of the page to follow the width of the device.</p>
-
-        <p>So based on this, if a page at least has a viewport meta tag where it's content attirbute contain
-            <code>width=device-width</code> then we consider that page responsive.</p>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/responsive/responsive.ts?footer=no"></script>
-
-
-        <h4>robots.txs</h4>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/robots/allowed-robots-txt.ts?footer=no"></script>
-
-        <h4>schema.org</h4>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/schema-org/schema-org.ts?footer=no"></script>
-
-        <h5>Schema Extraction</h5>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts?footer=no"></script>
-
-        <h4>status code</h4>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/status/status.ts?footer=no"></script>
-
-        <h4>tf-idf</h4>
-
-        <script
-            src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/tf%E2%80%93idf/tf%E2%80%93idf.ts?footer=no"></script>
-
+        <div class="col-12">
+            <h2>Express Server and Router</h2>
+
+            <p>Create and insrance of Express server and set it to use our apiRouter on <code>/api</code> path and
+                listen on
+                a port</p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/index.ts?footer=no"></script>
+
+            <p>
+                Create an instance of Express Router and add a <code>get</code> route matcher on path
+                <code>/page-leath</code> to use our main handler function. This now makes your API route to be
+                <code>/api/page-health</code>.
+            </p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/api/routes.ts?footer=no"></script>
+
+            <p>
+                Now let's create our handler function. It needs to be able to read the query string parameter for
+                <code>?url=</code> and validate it. If it checks out we can pass it to our render service to process it.
+                Otherwise we send an error response to the user to correct the faulty parameter.
+            </p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/api/page-health.route.ts?footer=no"></script>
+
+            <p>
+                Here is how we validate the URL. URL class throws an error when the passed string can not be constrcted
+                into
+                a
+                URL instance. So it's an easy to to validate a string.
+            </p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/utils/url.utils.ts?footer=no"></script>
+
+            <p>Ok now we are done with our general scaffolding for the API side. Let's build some software!</p>
+
+            <h2>Rendering Pages</h2>
+
+            <p>Our core service for the app is our render service. with few simple duties:</p>
+
+            <ul>
+                <li>Take the URL passed to it from API router</li>
+                <li>Create a puppeteer browser</li>
+                <li>Create a page and response object and pass it to all our metrics</li>
+                <li>Return the results from all metrics</li>
+                <li>Close browser</li>
+            </ul>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/page-render.service.ts?footer=no"></script>
+
+            <p>But as always the devil is in the details and there are few gotchas invovled:</p>
+
+            <ol>
+                <li>
+                    <h4>Chrome switches</h4>
+                    <p>
+                        We don't want to run many APIs chrome comes with out of the box, they are to slow down our
+                        service.
+                        For this
+                        we will use a custom <code>launchOptions</code> for puppeteer's <code>launch</code> function, so
+                        we
+                        can pass in a set a chrome swtiches</a>
+                        that would disable most of what we won't need.
+                    </p>
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/launch-options.ts?footer=no"></script>
+
+                    <p>We won't go into much details but you can checkout the list of
+                        <a href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/chrome-switches.ts?footer=no"
+                            target="_blank">switches passed into chrome</a>
+                        for disabling various features and Web APIs. You can also see the <a
+                            href="https://peter.sh/experiments/chromium-command-line-switches/" target="_blank">full
+                            list of
+                            args that chrome takes</a>.</p>
+                </li>
+                <li>
+                    <h4>Rejection tokens</h4>
+                    <p>
+                        We don't want to request any possible large assets of the page. Specially if they don't help us
+                        in
+                        calculation
+                        of our metrics. so we need to abort the requests that are made to <a
+                            href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/blocked-resource-types.ts?footer=no"
+                            target="_blank">such resources</a>.
+                    </p>
+
+                    <p>We also don't want our test to run any Analytics events so we would need to create a list of <a
+                            href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/analytics-rejections.ts?footer=no"
+                            target="_blank">typical analytics servers</a> too.</p>
+
+                    <p>And finally we need to also block any reqeust made to well known <a
+                            href="https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/ad-rejections.ts?footer=no"
+                            target="_blank">Advertising servers</a>, as they just slow down the whoe process.</p>
+
+                    <p>Now we are able to easily check whether the request URL is ResourceType is maching any of these
+                        types. And if so we can <code>.abort</code> the request and otherwise we simply
+                        <code>.continue</code></p>
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/config/page-request.handler.ts?footer=no"></script>
+                </li>
+            </ol>
+
+            <p>This consititues all the lifting that needs to be done before we can finally add some metrics to our API.
+            </p>
+
+            <h2>The metrics</h2>
+
+            <p>We want all our metrics to have the same blue print as we simply want to pass them all as an array into
+                our
+                rednering service and get a consistent set of results from them. To do so we need to create a blue print
+                abstract class which they all will extend.</p>
+
+            <p>The base metric will set few standards for our metrics:</p>
+
+            <ul>
+                <li>All metrics will get their results from puppeteer's <code>Page</code> and <code>Response</code></li>
+                <li>We need the response payloads to provide information about the type of data returned from each
+                    metric.
+                    We do this for better usability of our data, so another program can easily read what type the data
+                    has
+                    so it can pick the right type of handling logic against that metric.</li>
+                <li>We also want all metrics to have a unique name so that they can be easily picked from the list if
+                    needed.</li>
+                <li>All metrics should implement a public method called <code>getMetricValue</code> which provides the
+                    name
+                    and the final value of that metric. This is then used by the <code>getMetric</code> method from
+                    BaseMetric to add the other information we need for all the mtrics.</li>
+            </ul>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/base-types/base-metric.ts?footer=no"></script>
+
+
+            <h3>
+                Metric items
+            </h3>
+
+            <h4>Internal links</h4>
+
+            <p>The easiest way of determining if a list is internal is to check for that link is not external. and we
+                simply
+                do
+                this
+                by checking if the href's hostname is different to the current page's href hostname. see
+                <code>isExternalLink</code>
+                method below.</p>
+
+            <p>After this We need 4 piece of information about our links.</p>
+
+            <ul>
+                <li>Easy: <code>href</code></li>
+                <li>Easy: Text content</li>
+                <li>Tricky: List of all event listeners attached</li>
+                <li>Tricky: Is the link health or not</li>
+            </ul>
+
+            <p>There are no "easy" ways to extract all the event listeniners attached to an element (inline or from
+                script)
+                without doing lots of work. Not to worry as <a
+                    href="https://chromedevtools.github.io/devtools-protocol/">Chrome
+                    Developer Protocol</a> can come to the recue.</p>
+
+            <p>How you ask? CDP amongst other tools has access to the console API of chrome. Console API contains a
+                function
+                in
+                the global namespace called <code>getEventListeners</code>. This function is available when you open the
+                developer toolbar in chrome but normally isn't part of the gloabal namespace.</p>
+
+            <p>This function takes a node as argument and returns an object containing all the event listeners attached
+                to
+                that
+                element, making CDP an ideal choice for extracting our linkdata</p>
+
+            <p>You can create a CDP session through puppeteer's page object, which is perfect for us as we decided all
+                our
+                metrics will have access to the Page and Response object. To make this a little more encapsulated se
+                wrap
+                all the functionality we need from CDP into a class called <code>CDPSessionClient</code> so
+                we won't pollute our metric class with it's implementation detail detail.
+            </p>
+
+            <p>So now our <code>InternalLinks</code> metric class can extract the first three piece information for us.
+                For
+                health checking we will create our <code>LinkHealthChecker</code> class</p>
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/internal-links.ts?footer=no"></script>
+
+            <h6>CDPSessionClient</h6>
+
+            <ul>
+                <li>
+                    <p><b>Getting the <code>href</code> attribute</b></p>
+                    <p>For attirbute we will use the <code>DOM.getAttributes</code> command of CDP. The response of this
+                        command is an array of attribute names and their values in the same array. Yeah a little weird
+                        but
+                        it will do.
+                        So all we have to do is find what is the index of `href` in that response array and the value
+                        after
+                        that inde will be
+                        the href value.</p>
+                </li>
+                <li>
+                    <p><b>Getting event listeners</b></p>
+                    <p>As discussed earlier we will use the debugger function for this through
+                        <code>DOMDebugger.getEventListeners</code> command. Notice that unlike DOM normal API, CDP
+                        mainly
+                        operates on nodeId (Unique DOM node identifier).</p>
+                </li>
+                <li>
+                    <p><b>Getting text content</b></p>
+                    <p>CDP does not have a command to get the text content of a node so we use cheerio for that. Using
+                        the
+                        <code>DOM.getOuterHTML</code> we can get the HTML of the link however this would contain HTML so
+                        by
+                        parsing it using cheerio we can use the <code>.text()</code> method to get the combined text
+                        content.</p>
+                </li>
+            </ul>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/page-rendering/cdp/cdp-session-client.ts?footer=no"></script>
+
+            <h6>LinkHealthChecker</h6>
+
+            <p>This class uses the raw information we gathered using CDP. Health checher considers a link healthy when:
+            </p>
+
+            <ul>
+                <li>It has a value for href attribute</li>
+                <li>That value is not <code>#</code> based</li>
+                <li>that value is not javascript code (<code>javascript:</code>)</li>
+                <li>Not having event handlers is considered better but we allow them for now</li>
+            </ul>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/health-check/link-health-checker.ts?footer=no"></script>
+
+            <h4>No Index</h4>
+
+            <p>With simple metrics like this we don't have to go deep into CDP and we simply can rely on puppeteer's
+                high
+                level API.</p>
+
+            <p>Two things make a page NoIndex for bots:</p>
+
+            <ul>
+                <li>
+                    Having a
+                    <code>&lt;meta name=&#39;robots|googlebot|bingbot....&#39; content=&#39;noindex&#39;/&gt;</code> on
+                    the
+                    page.
+                </li>
+                <li>
+                    Having a <code>X-Robots-Tag=noindex</code> in the response headers
+                </li>
+            </ul>
+
+            <p>As you can see robots meta tag is not mononymous so the easiest way to determine meta noindex is by
+                looking
+                for meta tags that their <code>content</code> attribute value is <code>noindex</code>. We can easily do
+                this
+                by
+                passing a page function into <code>page.evaluate</code></p>
+
+            <p>For the headers we need to use the puppeteer's response object and look for the key
+                <code>X-Robots-Tag</code>
+                and
+                check if its value is <code>noindex</code></p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/noindex/noindex.ts?footer=no"></script>
+
+            <h4>Performance</h4>
+
+            <p>One of the newer Web APIs introduced recently is the Performance API which provides access to many of the
+                performance-related information you would want about a page.
+                Each piece of infomration in this API is called an entry. Each entry has a type which is the group the
+                entry
+                belongs to.
+            </p>
+
+            <p>For our purposes we are focusing on the page rendering performance which it's metric belong to entryType
+                called <code>paint</code>. This is the category that contains metrics such as <code>first-paint</code>
+                and
+                <code>first-contentful-paint</code> (FCP)</p>
+
+            <p>As far as FCP goes the lower the start time the better. <a
+                    href="https://web.dev/first-contentful-paint#how-lighthouse-determines-your-fcp-score"
+                    target="_blank">Lighthouse uses a particular scoring system for this.</a> which you may embrace.</p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/performance/performance.ts?footer=no"></script>
+
+            <h4>Redirect chain</h4>
+
+            <p>Puppeteer's request object contains the chain of requests however If there are no redirects and the
+                request
+                was successful, the chain will be empty. But for SEO purposes it's always nice to have the final link in
+                the
+                chain included too, so for this reason we always manually add the final link ourselves.</p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/redirect-chain/redirect-chain.ts?footer=no"></script>
+
+            <h4>Responsive</h4>
+
+            <p>What makes a page response is a complex debate, however we propose for simplcity that the minimum
+                requirement
+                for being responsive is for the width of the page to follow the width of the device.</p>
+
+            <p>So based on this, if a page at least has a viewport meta tag where it's content attirbute contain
+                <code>width=device-width</code> then we consider that page responsive.</p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/responsive/responsive.ts?footer=no"></script>
+
+
+            <h4>robots.txs</h4>
+
+            <p>
+                For robots we will be using a library called <a href="https://github.com/samclarke/robots-parser"
+                    target="_blank">robots-parser</a>. This tool is specially useful when your site has a large
+                robots.txt
+                file
+                and finding the specific rule that matches a url can be hard.
+            </p>
+
+            <p>You may wish to extend this so the API also allows you to pass custom user-agent to the parser. Or even
+                swtich it out with the newly opened sources <a href="https://github.com/google/robotstxt">Google
+                    robots.txt
+                    parser</a>. It is written in C++ so you would have to use a child process or tools like shell.js to
+                interact with the C++ binary. You can also do it using node-gyp by creating a <a
+                    href="https://nodejs.org/api/addons.html">node C++ native add-on</a> that
+                would call the robots_main directly from source. I may be sharing some of these techniques in future
+                posts.
+            </p>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/robots/allowed-robots-txt.ts?footer=no"></script>
+
+            <h4>schema.org</h4>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/schema-org/schema-org.ts?footer=no"></script>
+
+            <h5>Schema Extraction</h5>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/schema-org/extraction/schema-extractor.ts?footer=no"></script>
+
+            <h4>status code</h4>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/status/status.ts?footer=no"></script>
+
+            <h4>tf-idf</h4>
+
+            <script
+                src="https://gist-it.appspot.com/https://github.com/deepcrawl/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/tfidf/tfidf.ts?footer=no"></script>
+
+        </div>
 
     </div>
 </body>

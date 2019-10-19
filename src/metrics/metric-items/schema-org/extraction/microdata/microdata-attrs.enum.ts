@@ -1,4 +1,4 @@
-export enum schemaAttrs {
+export enum MicrodataAttrs {
   scope = "itemscope",
   type = "itemtype",
   prop = "itemprop"

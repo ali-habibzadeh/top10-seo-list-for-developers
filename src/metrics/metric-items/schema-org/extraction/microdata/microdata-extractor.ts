@@ -1,10 +1,10 @@
 import * as cheerio from "cheerio";
 
+import { valueAttrMappings } from "../prop-value.mappings";
+import { MicrodataAttrs } from "./microdata-attrs.enum";
 import { IMiccroDataScope } from "./microdata-scope.interface";
-import { valueAttrMappings } from "./prop-value.mappings";
-import { schemaAttrs } from "./schema-attrs.enum";
 
-export class SchemaExtractor {
+export class MicrodataExtractor {
   private attrMappings = valueAttrMappings;
   private $ = cheerio.load(this.content, { ignoreWhitespace: true });
   private scopesList = this.$("[itemscope][itemtype]");
@@ -25,7 +25,7 @@ export class SchemaExtractor {
   }
 
   private getSchemaTypeName(scope: CheerioElement): string {
-    const namespace = this.$(scope).attr(schemaAttrs.type);
+    const namespace = this.$(scope).attr(MicrodataAttrs.type);
     return namespace.replace(new RegExp("https?://schema.org/"), "");
   }
 
@@ -33,7 +33,7 @@ export class SchemaExtractor {
     return propsList.reduce(
       (obj, prop) => ({
         ...obj,
-        [prop.attribs[schemaAttrs.prop]]: this.getPropValue(prop)
+        [prop.attribs[MicrodataAttrs.prop]]: this.getPropValue(prop)
       }),
       {}
     );
