@@ -33,6 +33,7 @@
     "node-fetch": "^2.6.0",
     "puppeteer": "^1.20.0",
     "robots-parser": "^2.1.1",
+    "schema-dts": "^0.4.2",
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
     "tslint-config-deepcrawl": "git://github.com/deepcrawl/tslint-config-deepcrawl.git",

@@ -1,9 +1,10 @@
-import { camelCase, isArray } from "lodash";
+import { camelCase } from "lodash";
 import { Page, Response } from "puppeteer";
 
 import { IMetric, IMetricValue } from "./metric.interface";
 
 export abstract class BaseMetric {
+  private isArray = Array.isArray;
   constructor(protected page: Page, protected response: Response | null) {}
 
   public async getMetric(): Promise<IMetric<any>> {
@@ -18,7 +19,7 @@ export abstract class BaseMetric {
   }
 
   private getDataType(metricValue: any): { name: string; isArray: boolean } {
-    const isCollection = isArray(metricValue);
+    const isCollection = this.isArray(metricValue);
     const singleItem = isCollection ? metricValue[0] : metricValue;
     const toBeDetermined = singleItem ? singleItem : {};
     return {

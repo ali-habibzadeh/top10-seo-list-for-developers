@@ -1,8 +1,8 @@
 import * as cheerio from "cheerio";
 
-import { valueAttrMappings } from "../prop-value.mappings";
+import { IMiccroDataScope } from "../microdata-scope.interface";
 import { MicrodataAttrs } from "./microdata-attrs.enum";
-import { IMiccroDataScope } from "./microdata-scope.interface";
+import { valueAttrMappings } from "./prop-value.mappings";
 
 export class MicrodataExtractor {
   private attrMappings = valueAttrMappings;
