@@ -1,9 +1,9 @@
 import { Page, Response } from "puppeteer";
-import { IMiccroDataScope } from "src/metrics/metric-items/schema-org/extraction/microdata/microdata-scope.interface";
 
 import { BaseMetric } from "../../base-types/base-metric";
 import { IMetricValue } from "../../base-types/metric.interface";
 import { MicrodataExtractor } from "./extraction/microdata/microdata-extractor";
+import { IMiccroDataScope } from "./extraction/microdata/microdata-scope.interface";
 
 export class SchemaOrg extends BaseMetric {
   constructor(protected page: Page, response: Response | null) {
