@@ -15,10 +15,10 @@ declare module "web-auto-extractor" {
     ignoreWhitespace?: boolean;
   }
   export interface IAutoExtractorParseResponse {
-    metatags: {};
-    microdata: {};
-    rdfa: {};
-    jsonld: {};
+    metatags: Record<string, {}[]>;
+    microdata: Record<string, {}[]>;
+    rdfa: Record<string, {}[]>;
+    jsonld: Record<string, {}[]>;
   }
   export default () => {
     return { parse };
