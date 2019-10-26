@@ -1,0 +1,25 @@
+@startuml high-level-api
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Context.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+System_Boundary(MetricsExecution, "Metrics Execution") {
+    Component(apiRouter, "Express Routeer", "Api router")
+    Component(metricsList, "List of metrics", "Array of Classes")
+    Component(PageRenderService, "Page Render Service", "TypeScript Class")
+    Component(PageRequestHandler, "Page Request Handler", "TypeScript Class")
+
+    System_Ext(puppeteer, "puppeteer", "Headless Chrome Provider")
+
+    Rel(apiRouter, PageRenderService, "url: string")
+    Rel(PageRenderService, apiRouter, "IMetric<T>[]")
+
+    Rel(PageRenderService, puppeteer, "Lanches intance of Page object")
+    Rel(puppeteer, PageRenderService, "Page, Response")
+    Rel(PageRequestHandler, puppeteer, "Blocks unwanted requests to page")
+    Rel(PageRenderService, metricsList, "Page, Response")
+    Rel(metricsList, PageRenderService, "IMetric<T>[]")
+}
+
+@enduml
