@@ -1,10 +1,5 @@
 declare module "web-auto-extractor" {
-  interface CheerioOptionsInterface {
-    // Document References
-    // Cheerio https://github.com/cheeriojs/cheerio
-    // HTMLParser2 https://github.com/fb55/htmlparser2/wiki/Parser-options
-    // DomHandler https://github.com/fb55/DomHandler
-
+  interface ICheerioOptionsInterface {
     xmlMode?: boolean;
     decodeEntities?: boolean;
     lowerCaseTags?: boolean;
@@ -14,14 +9,19 @@ declare module "web-auto-extractor" {
     normalizeWhitespace?: boolean;
     ignoreWhitespace?: boolean;
   }
+  export interface ISchemaContext {
+    [key: string]: any;
+    "@context": string;
+    "@type": string;
+  }
   export interface IAutoExtractorParseResponse {
-    metatags: Record<string, {}[]>;
-    microdata: Record<string, {}[]>;
-    rdfa: Record<string, {}[]>;
-    jsonld: Record<string, {}[]>;
+    metatags: Record<string, string[]>;
+    microdata: Record<string, ISchemaContext[]>;
+    rdfa: Record<string, ISchemaContext[]>;
+    jsonld: Record<string, ISchemaContext[]>;
   }
   export default () => {
     return { parse };
   };
-  function parse(html: string, options?: CheerioOptionsInterface): IAutoExtractorParseResponse;
+  function parse(html: string, options?: ICheerioOptionsInterface): IAutoExtractorParseResponse;
 }
