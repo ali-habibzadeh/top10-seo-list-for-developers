@@ -37,8 +37,8 @@ export class SchemaValidator {
     return schemas
       .map((schema, index) => {
         const constName = `const_${index}`;
-        const constType = `schema.${schema["@type"]}`;
-        const object = JSON.stringify(schema, (k, v) => (k !== "@context" ? v : undefined));
+        const constType = `schema.WithContext<schema.${schema["@type"]}>`;
+        const object = JSON.stringify(schema);
         return `const ${constName}: ${constType} = ${object};`;
       })
       .join("\n");
