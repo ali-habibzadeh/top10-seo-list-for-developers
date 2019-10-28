@@ -11,9 +11,11 @@
   },
   "scripts": {
     "start": "node dist/index.js",
-    "prestart": "tsc",
+    "prestart": "yarn lint && yarn validate-deps && tsc",
+    "lint": "tslint --project tsconfig.json --config tslint.json './src/**/*.ts'",
     "watch": "tsc -w",
-    "docs": "typedoc --out docs src"
+    "docs": "typedoc --out docs src",
+    "validate-deps": "depcruise --validate .dependency-cruiser.js src"
   },
   "private": false,
   "dependencies": {
@@ -40,5 +42,8 @@
     "tslint-config-deepcrawl": "git://github.com/deepcrawl/tslint-config-deepcrawl.git",
     "typescript": "^3.6.3",
     "web-auto-extractor": "^1.0.17"
+  },
+  "devDependencies": {
+    "dependency-cruiser": "^5.2.2"
   }
 }
