@@ -1,5 +1,3 @@
-<img src="https://www.deepcrawl.com/wp-content/themes/deepcrawl/images/deepcrawl-logo.svg" alt="drawing" width="200">
-
 # Top 10 things developers need to know about SEO
 
 A Simple API containing a curated set of metrics about the health of a webpage from the technical SEO point of view. It should act as a starting point for an engineer who likes to play and learn more about extracting insights from web pages for the purposes of SEO or testing.
@@ -299,7 +297,7 @@ tfIdfTerm: https://github.com/NaturalNode/natural#tf-idf
 
 ## Code Documentation
 
-If you like to read how each metric is calculated please refer to the [code documentation.](https://deepcrawl.github.io/top10-seo-list-for-developers/)
+If you like to read how each metric is calculated please refer to the [code documentation.](https://ali-habibzadeh.github.io/top10-seo-list-for-developers/)
 
 ### High level API
 
