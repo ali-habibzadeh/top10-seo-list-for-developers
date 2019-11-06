@@ -14,7 +14,6 @@
     "prestart": "yarn lint && yarn validate-deps && tsc",
     "lint": "tslint --project tsconfig.json --config tslint.json './src/**/*.ts'",
     "watch": "tsc -w",
-    "docs": "typedoc --out docs src",
     "validate-deps": "depcruise --validate .dependency-cruiser.js src"
   },
   "private": false,
