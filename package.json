@@ -39,7 +39,7 @@
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
     "tslint-config-deepcrawl": "git://github.com/deepcrawl/tslint-config-deepcrawl.git",
-    "typescript": "^3.6.3",
+    "typescript": "^3.7.2",
     "web-auto-extractor": "^1.0.17"
   },
   "devDependencies": {
