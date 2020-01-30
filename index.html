@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" sizes="16x16 32x32" href="https://www.deepcrawl.com/wp-content/uploads/2015/03/DC-1.png">
-    <title>Top 10 things Developer need to know about SEO</title>
+    <title>The Top 10 Things Developers Need to Know About SEO</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <meta name="title" content="Top 10 things Developer need to know about SEO">
+    <meta name="title" content="The Top 10 Things Developers Need to Know About SEO">
     <meta name="description"
         content="A Simple API containing a curated set of metrics about the health of a webpage from the technical SEO point of view. It should act as a starting point for an engineer who likes to play and learn more about extracting insights from web pages for the purposes of SEO or testing.">
 
@@ -90,11 +90,11 @@
     <div class="jumbotron">
         <span class="brace">{}</span>
         <div class="container">
-            <h1>Top 10 things Developer need to know about SEO</h1>
+            <h1>The Top 10 Things Developers Need to Know About SEO</h1>
             <p class="lead">
-                A Simple API containing a curated set of metrics about the health of a webpage from the technical SEO
+                A simple API containing a curated set metrics about the health of a webpage from a technical SEO
                 point of
-                view. It should act as a starting point for an engineer who likes to play and learn more about
+                view. Hopefully this API will act as a starting point for any engineer who likes to play and learn more about
                 extracting
                 insights from web pages for the purposes of SEO or testing.
             </p>
@@ -109,16 +109,16 @@
         <div class="col-12">
             <h2>Express Server and Router</h2>
 
-            <p>Create and insrance of Express server and set it to use our apiRouter on <code>/api</code> path and
+            <p>Create an instance of Express server and set it to use our apiRouter on <code>/api</code> path and
                 listen on
-                a port</p>
+                a port.</p>
 
             <script
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/index.ts?footer=no"></script>
 
             <p>
                 Create an instance of Express Router and add a <code>get</code> route matcher on path
-                <code>/page-leath</code> to use our main handler function. This now makes your API route to be
+                <code>/page-health</code> to use our main handler function. This now makes your API route
                 <code>/api/page-health</code>.
             </p>
 
@@ -135,23 +135,23 @@
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/api/page-health.route.ts?footer=no"></script>
 
             <p>
-                Here is how we validate the URL. URL class throws an error when the passed string can not be constrcted
+                Here is how we validate the URL. URL class throws an error when the passed string can not be constructed
                 into
                 a
-                URL instance. So it's an easy to to validate a string.
+                URL instance, so it's an easy way to validate a string.
             </p>
 
             <script
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/utils/url.utils.ts?footer=no"></script>
 
-            <p>Ok now we are done with our general scaffolding for the API side. Let's build some software!</p>
+            <p>Now we are done with our general scaffolding for the API side, let's build some software!</p>
 
             <h2>Rendering Pages</h2>
 
-            <p>Our core service for the app is our render service. with few simple duties:</p>
+            <p>Our core service for the app is our rendering service, with a few simple duties:</p>
 
             <ul>
-                <li>Take the URL passed to it from API router</li>
+                <li>Take the URL passed to it from the API router</li>
                 <li>Create a puppeteer browser</li>
                 <li>Create a page and response object and pass it to all our metrics</li>
                 <li>Return the results from all metrics</li>
@@ -161,23 +161,23 @@
             <script
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/page-rendering/page-render.service.ts?footer=no"></script>
 
-            <p>But as always the devil is in the details and there are few gotchas invovled:</p>
+            <p>But, as always, the devil is in the details and there are few gotchas involved:</p>
 
 
             <h4>Chrome switches</h4>
             <p>
-                We don't want to run many APIs chrome comes with out of the box, they are to slow down our
+                We don't want to run too many of the APIs Chrome comes with out of the box, as they will slow down our
                 service.
-                For this
+                To overcome this
                 we will use a custom <code>launchOptions</code> for puppeteer's <code>launch</code> function, so
                 we
-                can pass in a set a chrome swtiches</a>
+                can pass in a set a chrome switches</a>
                 that would disable most of what we won't need.
             </p>
             <script
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/launch-options.ts?footer=no"></script>
 
-            <p>We won't go into much details but you can checkout the list of
+            <p>We won't go into much detail here, but you can check out the list of
                 <a href="https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/chrome-switches.ts?footer=no"
                     target="_blank">switches passed into chrome</a>
                 for disabling various features and Web APIs. You can also see the <a
@@ -187,40 +187,40 @@
 
             <h4>Rejection tokens</h4>
             <p>
-                We don't want to request any possible large assets of the page. Specially if they don't help us
+                We don't want to request any possibly large assets of the page, especially if they don't help us
                 in
                 calculation
-                of our metrics. so we need to abort the requests that are made to <a
+                of our metrics. So we need to abort the requests that are made to <a
                     href="https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/blocked-resource-types.ts?footer=no"
                     target="_blank">such resources</a>.
             </p>
 
-            <p>We also don't want our test to run any Analytics events so we would need to create a list of <a
+            <p>We also don't want our test to run any analytics events, so we would need to create a list of <a
                     href="https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/analytics-rejections.ts?footer=no"
                     target="_blank">typical analytics servers</a> too.</p>
 
-            <p>And finally we need to also block any reqeust made to well known <a
+            <p>And finally, we need to also block any request made to well known <a
                     href="https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/page-rendering/config/constants/ad-rejections.ts?footer=no"
-                    target="_blank">Advertising servers</a>, as they just slow down the whoe process.</p>
+                    target="_blank">advertising servers</a>, as they just slow down the whole process.</p>
 
-            <p>Now we are able to easily check whether the request URL is ResourceType is maching any of these
-                types. And if so we can <code>.abort</code> the request and otherwise we simply
-                <code>.continue</code></p>
+            <p>Now we are able to easily check whether the request URL in ResourceType is matching any of these
+                types. If so, we can <code>.abort</code> the request, otherwise we simply
+                <code>.continue</code></p>.
             <script
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/page-rendering/config/page-request.handler.ts?footer=no"></script>
 
 
-            <p>This consititues all the lifting that needs to be done before we can finally add some metrics to our API.
+            <p>This constitutes all of the lifting that needs to be done before we can finally add some metrics to our API.
             </p>
 
             <h2>The metrics</h2>
 
-            <p>We want all our metrics to have the same blue print as we simply want to pass them all as an array into
+            <p>We want all of our metrics to have the same blueprint, as we simply want to pass them all as an array into
                 our
-                rednering service and get a consistent set of results from them. To do so we need to create a blue print
-                abstract class which they all will extend.</p>
+                rendering service and get a consistent set of results from them. To do so we need to create a blueprint
+                abstract class which they will all extend.</p>
 
-            <p>The base metric will set few standards for our metrics:</p>
+            <p>The base metric will set a few standards for our metrics:</p>
 
             <ul>
                 <li>All metrics will get their results from puppeteer's <code>Page</code> and <code>Response</code></li>
@@ -234,7 +234,7 @@
                 <li>All metrics should implement a public method called <code>getMetricValue</code> which provides the
                     name
                     and the final value of that metric. This is then used by the <code>getMetric</code> method from
-                    BaseMetric to add the other information we need for all the mtrics.</li>
+                    BaseMetric to add the other information we need for all the metrics.</li>
             </ul>
 
             <script
@@ -243,51 +243,51 @@
 
             <h3>Internal links</h3>
 
-            <p>The easiest way of determining if a list is internal is to check for that link is not external. and we
+            <p>The easiest way of determining if a link is internal is to check that it is not external. We
                 simply
                 do
                 this
-                by checking if the href's hostname is different to the current page's href hostname. see
+                by checking if the href's hostname is different to the current page's href hostname. See
                 <code>isExternalLink</code>
                 method below.</p>
 
-            <p>After this We need 4 piece of information about our links.</p>
+            <p>After this we need 4 pieces of information about our links:</p>
 
             <ul>
                 <li>Easy: <code>href</code></li>
                 <li>Easy: Text content</li>
                 <li>Tricky: List of all event listeners attached</li>
-                <li>Tricky: Is the link health or not</li>
+                <li>Tricky: Is the link healthy or not</li>
             </ul>
 
-            <p>There are no "easy" ways to extract all the event listeniners attached to an element (inline or from
+            <p>There is no "easy" way to extract all the event listeners attached to an element (inline or from
                 script)
                 without doing lots of work. Not to worry as <a
                     href="https://chromedevtools.github.io/devtools-protocol/">Chrome
-                    Developer Protocol</a> can come to the recue.</p>
+                    Developer Protocol</a> (CDP) can come to the rescue.</p>
 
-            <p>How you ask? CDP amongst other tools has access to the console API of chrome. Console API contains a
+            <p>How, you ask? CDP, amongst other tools, has access to the console API of chrome. Console API contains a
                 function
                 in
                 the global namespace called <code>getEventListeners</code>. This function is available when you open the
-                developer toolbar in chrome but normally isn't part of the gloabal namespace.</p>
+                developer toolbar in chrome but normally isn't part of the global namespace.</p>
 
-            <p>This function takes a node as argument and returns an object containing all the event listeners attached
+            <p>This function takes a node as an argument and returns an object containing all the event listeners attached
                 to
                 that
-                element, making CDP an ideal choice for extracting our linkdata</p>
+                element, making CDP an ideal choice for extracting our link data.</p>
 
             <p>You can create a CDP session through puppeteer's page object, which is perfect for us as we decided all
                 our
-                metrics will have access to the Page and Response object. To make this a little more encapsulated se
+                metrics will have access to the Page and Response object. To make this a little more encapsulated, we can
                 wrap
                 all the functionality we need from CDP into a class called <code>CDPSessionClient</code> so
-                we won't pollute our metric class with it's implementation detail detail.
+                we won't pollute our metric class with its implementation detail.
             </p>
 
-            <p>So now our <code>InternalLinks</code> metric class can extract the first three piece information for us.
+            <p>So now our <code>InternalLinks</code> metric class can extract the first three pieces of information for us.
                 For
-                health checking we will create our <code>LinkHealthChecker</code> class</p>
+                health checking we will create our <code>LinkHealthChecker</code> class</p>:
             <script
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/internal-links/internal-links.ts?footer=no"></script>
 
@@ -296,28 +296,28 @@
 
             <ul>
                 <li>
-                    <p><b>Getting the <code>href</code> attribute</b>: For attirbute we will use the
-                        <code>DOM.getAttributes</code> command of CDP. The response of this
-                        command is an array of attribute names and their values in the same array. Yeah a little weird
+                    <p><b>Getting the <code>href</code> attribute</b>: For attribute we will use the
+                        <code>DOM.getAttributes</code> command in CDP. The response of this
+                        command is an array of attribute names and their values in the same array (yeah, a little weird,
                         but
-                        it will do.
-                        So all we have to do is find what is the index of `href` in that response array and the value
+                        it will do.)
+                        So all we have to do is find what the index of `href` is in that response array and the value
                         after
-                        that inde will be
+                        that index will be
                         the href value.</p>
                 </li>
                 <li>
-                    <p><b>Getting event listeners</b>: As discussed earlier we will use the debugger function for this
-                        through
+                    <p><b>Getting event listeners</b>: As discussed earlier, we will use the debugger function for this
+                        through the
                         <code>DOMDebugger.getEventListeners</code> command. Notice that unlike DOM normal API, CDP
                         mainly
                         operates on nodeId (Unique DOM node identifier).</p>
                 </li>
                 <li>
-                    <p><b>Getting text content</b>: CDP does not have a command to get the text content of a node so we
+                    <p><b>Getting text content</b>: CDP does not have a command to get the text content of a node, so we
                         use cheerio for that. Using
                         the
-                        <code>DOM.getOuterHTML</code> we can get the HTML of the link however this would contain HTML so
+                        <code>DOM.getOuterHTML</code> we can get the HTML of the link, however, this would contain HTML, so
                         by
                         parsing it using cheerio we can use the <code>.text()</code> method to get the combined text
                         content.</p>
@@ -329,13 +329,13 @@
 
             <h3>LinkHealthChecker</h3>
 
-            <p>This class uses the raw information we gathered using CDP. Health checher considers a link healthy when:
+            <p>This class uses the raw information we gathered using CDP. Health checker considers a link healthy when:
             </p>
 
             <ul>
-                <li>It has a value for href attribute</li>
+                <li>It has a value for the href attribute</li>
                 <li>That value is not <code>#</code> based</li>
-                <li>that value is not javascript code (<code>javascript:</code>)</li>
+                <li>That value is not javascript code (<code>javascript:</code>)</li>
                 <li>Not having event handlers is considered better but we allow them for now</li>
             </ul>
 
@@ -344,7 +344,7 @@
 
             <h3>No Index</h3>
 
-            <p>With simple metrics like this we don't have to go deep into CDP and we simply can rely on puppeteer's
+            <p>With simple metrics like this we don't have to go too deep into CDP, as we can simply rely on puppeteer's
                 high
                 level API.</p>
 
@@ -362,14 +362,14 @@
                 </li>
             </ul>
 
-            <p>As you can see robots meta tag is not mononymous so the easiest way to determine meta noindex is by
+            <p>As you can see, robots meta tag is not mononymous so the easiest way to determine meta noindex is by
                 looking
-                for meta tags that their <code>content</code> attribute value is <code>noindex</code>. We can easily do
+                for meta tags where their <code>content</code> attribute value is <code>noindex</code>. We can easily do
                 this
                 by
                 passing a page function into <code>page.evaluate</code></p>
 
-            <p>For the headers we need to use the puppeteer's response object and look for the key
+            <p>For the headers, we need to use the puppeteer's response object and look for the key
                 <code>X-Robots-Tag</code>
                 and
                 check if its value is <code>noindex</code></p>
@@ -381,28 +381,28 @@
 
             <p>One of the newer Web APIs introduced recently is the Performance API which provides access to many of the
                 performance-related information you would want about a page.
-                Each piece of infomration in this API is called an entry. Each entry has a type which is the group the
+                Each piece of information in this API is called an entry. Each entry has a type which is the group the
                 entry
                 belongs to.
             </p>
 
-            <p>For our purposes we are focusing on the page rendering performance which it's metric belong to entryType
+            <p>For our purposes we are focusing on the page rendering performance, for which its metric belongs to the entryType
                 called <code>paint</code>. This is the category that contains metrics such as <code>first-paint</code>
                 and
-                <code>first-contentful-paint</code> (FCP)</p>
+                <code>first-contentful-paint</code> (FCP).</p>
 
             <p>As far as FCP goes the lower the start time the better. <a
                     href="https://web.dev/first-contentful-paint#how-lighthouse-determines-your-fcp-score"
-                    target="_blank">Lighthouse uses a particular scoring system for this.</a> which you may embrace.</p>
+                    target="_blank">Lighthouse uses a particular scoring system for this</a>, which you may embrace.</p>
 
             <script
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/performance/performance.ts?footer=no"></script>
 
             <h3>Redirect chain</h3>
 
-            <p>Puppeteer's request object contains the chain of requests however If there are no redirects and the
+            <p>Puppeteer's request object contains the chain of requests, however, if there are no redirects and the
                 request
-                was successful, the chain will be empty. But for SEO purposes it's always nice to have the final link in
+                was successful, the chain will be empty. For SEO purposes it's always nice to have the final link in
                 the
                 chain included too, so for this reason we always manually add the final link ourselves.</p>
 
@@ -411,12 +411,12 @@
 
             <h3>Responsive</h3>
 
-            <p>What makes a page response is a complex debate, however we propose for simplcity that the minimum
+            <p>What makes a page responsive is a complex debate, however, we propose for simplicity that the minimum
                 requirement
                 for being responsive is for the width of the page to follow the width of the device.</p>
 
-            <p>So based on this, if a page at least has a viewport meta tag where it's content attirbute contain
-                <code>width=device-width</code> then we consider that page responsive.</p>
+            <p>So based on this, if a page at least has a viewport meta tag where its content attribute contains
+                <code>width=device-width</code> then we consider this page to be responsive.</p>
 
             <script
                 src="https://gist-it.appspot.com/https://github.com/ali-habibzadeh/top10-seo-list-for-developers/blob/master/src/metrics/metric-items/responsive/responsive.ts?footer=no"></script>
@@ -426,14 +426,14 @@
 
             <p>
                 For robots we will be using a library called <a href="https://github.com/samclarke/robots-parser"
-                    target="_blank">robots-parser</a>. This tool is specially useful when your site has a large
+                    target="_blank">robots-parser</a>. This tool is especially useful when your site has a large
                 robots.txt
                 file
                 and finding the specific rule that matches a url can be hard.
             </p>
 
-            <p>You may wish to extend this so the API also allows you to pass custom user-agent to the parser. Or even
-                swtich it out with the newly opened sources <a href="https://github.com/google/robotstxt"
+            <p>You may wish to extend this so the API also allows you to pass custom user-agents to the parser, or even
+                switch them out with the newly open sourced <a href="https://github.com/google/robotstxt"
                     target="_blank">Google
                     robots.txt
                     parser</a>. It is written in C++ so you would have to use a child process or tools like shell.js to
@@ -448,9 +448,9 @@
 
             <h3>schema.org</h3>
 
-            <p>For extranting schema we use a library called <a href="https://github.com/indix/web-auto-extractor"
+            <p>For extracting schema, we use a library called <a href="https://github.com/indix/web-auto-extractor"
                     target="_blank">Web
-                    Auto Extractor</a> which can extract Microdata, RDFa-lite, JSON-LD and some random metatags</p>
+                    Auto Extractor</a> which can extract Microdata, RDFa-lite, JSON-LD and some other random meta tags.</p>
 
             <p>In future posts we may show how to validate this extracted data against actual schema definitions</p>
 
@@ -459,7 +459,7 @@
 
             <h3>Status code</h3>
 
-            <p>Puppeteer's response object contains a utility method for stauts which is perfect for adding it to our
+            <p>Puppeteer's response object contains a utility method for status, which is perfect for adding to our
                 metrics.</p>
 
             <script
